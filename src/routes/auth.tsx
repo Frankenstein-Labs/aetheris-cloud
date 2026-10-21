@@ -7,6 +7,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
 import { googleCallbackUrl, safeAuthRedirect } from "@/lib/auth-redirect";
+import heroImg from "@/assets/hero-cloud.jpg";
 
 export const Route = createFileRoute("/auth")({
   validateSearch: (search) => ({
@@ -114,150 +115,71 @@ function AuthPage() {
     }
   };
 
+  const inputCls =
+    "h-10 w-full rounded-md border border-input bg-transparent px-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring";
+
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-background relative overflow-hidden">
-      {/* Atmospheric background */}
-      <div
-        aria-hidden
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse 70% 50% at 20% 20%, oklch(0.65 0.24 295 / 0.25), transparent 60%), radial-gradient(ellipse 60% 50% at 80% 80%, oklch(0.78 0.18 220 / 0.2), transparent 60%)",
-        }}
-      />
-      <div className="bg-grid absolute inset-0 pointer-events-none opacity-40" aria-hidden />
-
-      <div className="relative w-full max-w-md">
-        <Link to="/" className="flex items-center gap-2.5 justify-center mb-8 group">
-          <div className="relative h-10 w-10">
-            <div className="absolute inset-0 rounded-xl bg-gradient-primary opacity-90" />
-            <div className="absolute inset-0 rounded-xl shadow-glow-cyan opacity-50" />
-            <div className="relative h-full w-full rounded-xl flex items-center justify-center font-display text-background font-bold text-xl">
-              Æ
-            </div>
-          </div>
-          <span className="font-display text-2xl font-semibold tracking-tight">
-            Aetheris<span className="text-primary">.</span>
-          </span>
+    <div className="grid min-h-svh bg-background text-foreground lg:grid-cols-2">
+      <div className="flex flex-col gap-4 p-6 md:p-10">
+        <Link to="/" className="flex items-center gap-2 font-medium">
+          <span className="flex size-7 items-center justify-center rounded-md bg-primary font-bold text-primary-foreground">Æ</span>
+          Aetheris Cloud
         </Link>
-
-        <div className="glass rounded-3xl p-8 shadow-elevated border-gradient">
-          <h1 className="font-display text-2xl font-semibold tracking-tight">
-            {isSignup ? "Créer un compte" : "Se connecter"}
-          </h1>
-          <p className="text-sm text-muted-foreground mt-1">
-            {isSignup
-              ? "Démarrez avec 100k tokens gratuits"
-              : "Accédez à votre console développeur"}
-          </p>
-
-          <button
-            onClick={handleGoogle}
-            disabled={submitting}
-            className="mt-6 w-full flex items-center justify-center gap-3 rounded-xl border border-border bg-surface-elevated/50 hover:bg-surface-elevated transition-colors px-4 py-3 text-sm font-medium disabled:opacity-50"
-          >
-            <svg className="h-5 w-5" viewBox="0 0 24 24">
-              <path
-                fill="#4285F4"
-                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
-              />
-              <path
-                fill="#34A853"
-                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
-              />
-              <path
-                fill="#FBBC05"
-                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
-              />
-              <path
-                fill="#EA4335"
-                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
-              />
-            </svg>
-            Continuer avec Google
-          </button>
-
-          <div className="my-6 flex items-center gap-3">
-            <div className="flex-1 h-px bg-border" />
-            <span className="text-xs uppercase tracking-widest text-muted-foreground">ou</span>
-            <div className="flex-1 h-px bg-border" />
-          </div>
-
-          <form onSubmit={handleSubmit} className="space-y-4">
-            {isSignup && (
-              <div>
-                <label className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
-                  Nom complet
-                </label>
-                <input
-                  type="text"
-                  value={fullName}
-                  onChange={(e) => setFullName(e.target.value)}
-                  required={isSignup}
-                  placeholder="Jean Dupont"
-                  className="mt-2 w-full rounded-xl bg-surface-elevated/50 border border-border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition"
-                />
+        <div className="flex flex-1 items-center justify-center">
+          <div className="w-full max-w-xs">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+              <div className="flex flex-col items-center gap-2 text-center">
+                <h1 className="text-2xl font-bold">{isSignup ? "Créer un compte" : "Connexion à votre compte"}</h1>
+                <p className="text-sm text-muted-foreground">
+                  {isSignup ? "Entrez vos informations pour créer votre compte" : "Entrez votre email ci-dessous pour vous connecter"}
+                </p>
               </div>
-            )}
-            <div>
-              <label className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
-                Email
-              </label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                placeholder="vous@entreprise.com"
-                className="mt-2 w-full rounded-xl bg-surface-elevated/50 border border-border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition"
-              />
-            </div>
-            <div>
-              <div className="flex items-center justify-between">
-                <label className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
-                  Mot de passe
-                </label>
-                {!isSignup && (
-                  <Link to="/reset-password" className="text-xs text-primary hover:text-primary/80">
-                    Oublié ?
-                  </Link>
+              <div className="grid gap-6">
+                {isSignup && (
+                  <div className="grid gap-2">
+                    <label htmlFor="fullName" className="text-sm font-medium">Nom complet</label>
+                    <input id="fullName" type="text" value={fullName} onChange={(e) => setFullName(e.target.value)} required placeholder="Jean Dupont" className={inputCls} />
+                  </div>
                 )}
+                <div className="grid gap-2">
+                  <label htmlFor="email" className="text-sm font-medium">Email</label>
+                  <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="m@exemple.com" className={inputCls} />
+                </div>
+                <div className="grid gap-2">
+                  <div className="flex items-center">
+                    <label htmlFor="password" className="text-sm font-medium">Mot de passe</label>
+                    {!isSignup && (
+                      <Link to="/reset-password" className="ms-auto text-sm underline-offset-4 hover:underline">Mot de passe oublié ?</Link>
+                    )}
+                  </div>
+                  <input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required minLength={8} className={inputCls} />
+                </div>
+                <button type="submit" disabled={submitting} className="flex h-10 w-full items-center justify-center gap-2 rounded-md bg-primary text-sm font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-60">
+                  {submitting && <Loader2 className="h-4 w-4 animate-spin" />}
+                  {isSignup ? "Créer mon compte" : "Se connecter"}
+                </button>
+                <div className="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
+                  <span className="relative z-10 bg-background px-2 text-muted-foreground">Ou continuer avec</span>
+                </div>
+                <button type="button" onClick={handleGoogle} disabled={submitting} className="flex h-10 w-full items-center justify-center gap-2 rounded-md border border-input bg-background text-sm font-medium hover:bg-accent disabled:opacity-60">
+                  <svg className="h-4 w-4" viewBox="0 0 24 24" aria-hidden>
+                    <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09zM12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23zM5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84zM12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                  </svg>
+                  Se connecter avec Google
+                </button>
               </div>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-                minLength={8}
-                placeholder="••••••••"
-                className="mt-2 w-full rounded-xl bg-surface-elevated/50 border border-border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition"
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={submitting}
-              className="w-full rounded-xl bg-gradient-primary text-primary-foreground font-medium px-4 py-3 text-sm shadow-glow-cyan hover:shadow-glow-plasma transition-all disabled:opacity-60 flex items-center justify-center gap-2"
-            >
-              {submitting && <Loader2 className="h-4 w-4 animate-spin" />}
-              {isSignup ? "Créer mon compte" : "Se connecter"}
-            </button>
-          </form>
-
-          <p className="mt-6 text-center text-sm text-muted-foreground">
-            {isSignup ? "Déjà un compte ?" : "Pas encore de compte ?"}{" "}
-            <button
-              onClick={() => setIsSignup(!isSignup)}
-              className="text-primary hover:text-primary/80 font-medium"
-            >
-              {isSignup ? "Se connecter" : "S'inscrire"}
-            </button>
-          </p>
+              <div className="text-center text-sm">
+                {isSignup ? "Déjà un compte ?" : "Pas encore de compte ?"}{" "}
+                <button type="button" onClick={() => setIsSignup(!isSignup)} className="underline underline-offset-4">
+                  {isSignup ? "Se connecter" : "S'inscrire"}
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-
-        <p className="mt-6 text-center text-xs text-muted-foreground">
-          En continuant, vous acceptez nos conditions d'utilisation.
-        </p>
+      </div>
+      <div className="relative hidden bg-muted lg:block">
+        <img src={heroImg} alt="" className="absolute inset-0 h-full w-full object-cover opacity-60" />
       </div>
     </div>
   );
