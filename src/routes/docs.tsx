@@ -17,6 +17,8 @@ export const Route = createFileRoute("/docs")({
         content:
           "Une seule clé API pour appeler Gemini, GPT-5 et n'importe quel modèle HuggingFace (Mistral, LLaMA, Qwen).",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: DocsPage,
