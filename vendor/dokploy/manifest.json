@@ -1,0 +1,1932 @@
+{
+  "repository": "https://github.com/Dokploy/dokploy",
+  "ref": "main",
+  "commit": "05970e7b234d4742ceab2967490597fbde47dbdd",
+  "scope": "UI sources only, excluding proprietary directories, assets, server code and environment files",
+  "files": [
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/cluster/modify-swarm-settings.tsx",
+      "sha256": "95023640c811e7621449d4dccc8e6633baa4fa5db9e2fd90c47b404f8e9070f2"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/cluster/show-cluster-settings.tsx",
+      "sha256": "f8b03cae614fa70f00feca4103894e2a3bf5c8afa809a6729f924b63acb1e26d"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/cluster/swarm-forms/endpoint-spec-form.tsx",
+      "sha256": "c2b2102d6f7e3234ade4eba96b31ccb5c3d60c88fa957305cd78471e83753d40"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/cluster/swarm-forms/health-check-form.tsx",
+      "sha256": "48e0957eafa1b259d823ece3298d0a92a510873f28c3e39f3d47f7a2b3b7e2e0"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/cluster/swarm-forms/index.ts",
+      "sha256": "fd3185bfe1218ea4a36cddd5c6502936c0ce2317997a43aa7a261647f7456e45"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/cluster/swarm-forms/labels-form.tsx",
+      "sha256": "8c6b03f06a721d2960f225ef96d8ddec72d62b6b596f6b237ddd07f8e980b18e"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/cluster/swarm-forms/mode-form.tsx",
+      "sha256": "40627b36fcdb5d01f4bdb9987c2acf2377afaf6d787941a4d6156ed18e1d3a59"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/cluster/swarm-forms/network-form.tsx",
+      "sha256": "8aa119a7902e5f23d909437552c05a52d0ab185f976c15df5afd2e12b64216e2"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/cluster/swarm-forms/placement-form.tsx",
+      "sha256": "2d7e0955c6fc0f3f39e6ffabc168957c1bca66ee2fc755783f15c6ef10f3fa4b"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/cluster/swarm-forms/restart-policy-form.tsx",
+      "sha256": "adc12a249607ab02284493331ce65e827748dbca454360a15f5e765fb09dcfb2"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/cluster/swarm-forms/rollback-config-form.tsx",
+      "sha256": "33150a8d96b9f8ae5082bb0789e3f58024e6f1eed629b71e289ea237d5092e79"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/cluster/swarm-forms/stop-grace-period-form.tsx",
+      "sha256": "eb2dcddb4b295023e3f682054d678d183d975a9b8eecd9a38413d83b51b472a6"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/cluster/swarm-forms/update-config-form.tsx",
+      "sha256": "582105db605e51b33bf92dce751c17b362222ac68a32663bd333d7a2552335d1"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/general/add-command.tsx",
+      "sha256": "33b6c135c02b226b45055224e83a0c0bf3bff90aa362227ddc268e6d982b990b"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/import/show-import.tsx",
+      "sha256": "cf502e1f5587b3c6c517b6dcba2d8f47db387e8790d773034d3eb352e4c7a2d9"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/ports/handle-ports.tsx",
+      "sha256": "08a782e1a211333014364a889819adec79b12745aa135bc4f1b827031b182a52"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/ports/show-port.tsx",
+      "sha256": "6eecfcf540dbcbab22d0b1e83c39eb7b9e95225cc992e97a0d8c3e0c96b5d213"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/redirects/handle-redirect.tsx",
+      "sha256": "27ff62deabae58db41522fc2c2e5e95e65c6fe7a486be921e4587db5357d6b3a"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/redirects/show-redirects.tsx",
+      "sha256": "46305327d722601c9b39768252d7379dae367dad7b4ad721a4a8bb762c8498f3"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/security/handle-security.tsx",
+      "sha256": "6270ecb47eac14a3839ebba0ccce1aaea6971140339c2ae5f5aac09fde321277"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/security/show-security.tsx",
+      "sha256": "59713d5f323ac70638dd0c253b8abcee3c3a9a8c35baf2aff57528a1a6122d30"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/show-build-server.tsx",
+      "sha256": "03bd079b2871294b28377f75db2e21f8a7b4a882413aa279aa60a5c54712e103"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/show-resources.tsx",
+      "sha256": "20da1c7902d5064ccb68fe70df8ae8ec202f56266bd02f826a5ebffa7b912037"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/traefik/show-traefik-config.tsx",
+      "sha256": "b6d83e40816e489eb3d26b277a9035cd1388858448f27a8007e0f62582f27503"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/traefik/update-traefik-config.tsx",
+      "sha256": "31da33bdd85c51016380dc2e86d0c5859f9d3262b80e6c57c55fc95d7cfa0b46"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/volumes/add-volumes.tsx",
+      "sha256": "97d62b13f7f98677f881977c1cc92ec08ee68787312ce24f565c26357adbabb5"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/volumes/show-volumes.tsx",
+      "sha256": "21f30e90028235654f272d6eb0cafc2df8b30496d24a4d1a0ac231ab77b400c5"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/advanced/volumes/update-volume.tsx",
+      "sha256": "a59c2f98dd61c96f84b7737241e82e8a5a194307380a7435945b601e29a1114d"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/build/show.tsx",
+      "sha256": "0e6dfea82ba96e3ce417454c463d85a216d49bebea690bbb6dc2a74ffa7cf07c"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/deployments/cancel-queues.tsx",
+      "sha256": "3c02e4d1d3871ea7abf68520233952274cfe9aa872dd42449053d57c34439975"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/deployments/clear-deployments.tsx",
+      "sha256": "35233af62ab3ab35a77ce310371370e829617d8d2f0c5e4c75e5ebd7012d3572"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/deployments/kill-build.tsx",
+      "sha256": "497c6e1fa1da2faaf754bc67a2978e039851a9fed9306e0737d6d88ff92fc294"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/deployments/refresh-token.tsx",
+      "sha256": "b6db586a2336101a4744745ca622f5b1a529e910c4268d9b96f56d68e96b31f2"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/deployments/show-deployment.tsx",
+      "sha256": "b67d20dd92de4f7c358b71a4d2e61073027c23b93ae4700a2353b43deb76c61d"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/deployments/show-deployments-modal.tsx",
+      "sha256": "50d7a111cf02f3549ce6b48f276e6467ffeaea408ad02fa0d63655214920bbfb"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/deployments/show-deployments.tsx",
+      "sha256": "aa310ad3e9b5f5ec35d70acd8efbdd6872b3c5d90f55e57fd077e295169e0b6c"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/domains/columns.tsx",
+      "sha256": "2cbc9de73389814c77121c54248703ad1a83575fab0bf1dbe48055b5b245a44e"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/domains/dns-helper-modal.tsx",
+      "sha256": "bcedfae10fa24e6bacc7425fecd0d5888914cfa7418e6795eaa8492a305af9b6"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/domains/handle-domain.tsx",
+      "sha256": "c7aeefb8ad316dfef102d9f3663203044d136e1346d900d721c4a0f20b7e4be0"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/domains/handle-forward-auth.tsx",
+      "sha256": "d00df040378a4c359b1e4f7883da4f541fea120428b5a030c80ec923f8ce585d"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/domains/redeploy-hint.tsx",
+      "sha256": "64915359e6f23b011932927f9ea93c6737f4e50190d3e4a3503e53f159763ba5"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/domains/show-domains.tsx",
+      "sha256": "c20f90498838d92a28a0023d5c54354971e5e0a2ef4ba23125abdd8953b12529"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/environment/show-environment.tsx",
+      "sha256": "86f9944f33bde44cdfd93ebb962ac69a5fa73aa2420096e7625af89fcc1510a5"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/environment/show.tsx",
+      "sha256": "c98cfa3b2a0f030fd77a440c51958fd8c2f24e9fac5df2075faae187bd61a107"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/general/generic/save-bitbucket-provider.tsx",
+      "sha256": "c058e1a5ba0cf3978382538c0b0ccd0929d4a205664b4d2d3cb81b0cbf7f2dbe"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/general/generic/save-docker-provider.tsx",
+      "sha256": "06ae942846638235ee3fa57551ce7622ce7aeabe634c89a1691afb3b4517a5da"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/general/generic/save-drag-n-drop.tsx",
+      "sha256": "768c68b94c565c1f268f6c727b3c61295548d2d85ef88f7636cd6513a1262205"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/general/generic/save-git-provider.tsx",
+      "sha256": "95bb080e91a6f41d341c2cb404792cdfa1627509e7fd0628bd3b9b56a9680aef"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/general/generic/save-gitea-provider.tsx",
+      "sha256": "f4ed31ed3f44103da94a1a640e50462a2ddbce490a6592e49eec338167283488"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/general/generic/save-github-provider.tsx",
+      "sha256": "76a2f9fa77967444cf6c9a7aadabe93695c88a515d0cc441e5d81ec3b03139d1"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/general/generic/save-gitlab-provider.tsx",
+      "sha256": "1499a23615d4068d53fd176dd49dea77c8f2cb59400680df1a1de5bd464cbce6"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/general/generic/show.tsx",
+      "sha256": "1baff08e6ec3404def9103db3aaecbeface06c77327216648993d591002df7fc"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/general/generic/unauthorized-git-provider.tsx",
+      "sha256": "dbe72853553fef0e567a178bdd958483a1f1333c5955e4863d4e42c1fb85f5b1"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/general/show.tsx",
+      "sha256": "dccb248b625e4aee64570ae89153ae5db159ba70d8e71c467d29f472b4139c02"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/icon/show-icon-settings.tsx",
+      "sha256": "547f85805eb7183214ca3b40bdc5ef117251e6808ac80f2a2d0ca7764983ec75"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/logs/show.tsx",
+      "sha256": "0fbc25d3b8edd24f29c90c38f675dc87f43d3870dd4cd72b4aa6424a7fb63b76"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/patches/create-file-dialog.tsx",
+      "sha256": "47bfc053b3626d1ab217ea1b07624fd8f1a548d57aaf62bf8da157fbdec20f18"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/patches/edit-patch-dialog.tsx",
+      "sha256": "0262fdd6e89201e3cbaed8eab279edfd2bed79af4c01e6d03a311e8f971d7514"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/patches/index.ts",
+      "sha256": "2d005decbc95b38c00100af592bef8bb224598be5b4de1e1e1221a73fffc960e"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/patches/patch-editor.tsx",
+      "sha256": "6cec91128c74f1df9864f83670c7760ca33b63554d6a29696b1af4bbd82ead75"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/patches/show-patches.tsx",
+      "sha256": "9620a03eb7f6d469f427f93369f89655d46b6d394cc0927dd6572c1c16d8dc1b"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/preview-deployments/add-preview-domain.tsx",
+      "sha256": "921d46542165ae42e6452514443ff2fe484a8b934fe3cfb0b5f344e442298fc2"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/preview-deployments/show-preview-deployments.tsx",
+      "sha256": "3e85db621cbe287cd7ed32a1c2986dc9ebdc55c9cb3433da7ed70462acd8b48e"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/preview-deployments/show-preview-settings.tsx",
+      "sha256": "0e927864c51f07b54cade568acca915e1d0474d7f69b32f818efb42b8a1d680d"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/rollbacks/show-rollback-settings.tsx",
+      "sha256": "b6574c2c8e626fad402b56ddd3b754eaf1e7e20efd855993e09e4f3a0108c894"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/schedules/handle-schedules.tsx",
+      "sha256": "91772e55cd5a1ea42bb9f9f0abe8d89eccb98808adb2e3cbd987da3db91a5373"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/schedules/show-schedules.tsx",
+      "sha256": "d0eb647ad6535d345a5b9f36872297c7c5d69664d7f13920a513faf9a7d1b43d"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/schedules/timezones.ts",
+      "sha256": "d381c2628dc4950c0d5cc7eb1928dd4497638e0ae03c6bd597c7d0d6f16de115"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/update-application.tsx",
+      "sha256": "142c753930d64dc8c7fdb237be2e82f59984edfd8dc813676ef0be4000435e66"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/volume-backups/handle-volume-backups.tsx",
+      "sha256": "5d6bd5a6090ac3cc387f83b1403b92545fcf9b949b63fa8a7c6d6fab19960039"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/volume-backups/restore-volume-backups.tsx",
+      "sha256": "cedf02f9b01f3fe0a7e963f9f3417720431e0cb53c37505d2f729039a01cf1e8"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/application/volume-backups/show-volume-backups.tsx",
+      "sha256": "c6c96351e0098e3da6b9ff46a8f80b6e92851b8902430dbb5279dc0e0443cf66"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/billing/trial-banner.tsx",
+      "sha256": "b25dc3a15fbf7ba447b199e5e1826280ec596009a0cac19cc329dd06434252ed"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/compose/advanced/add-command.tsx",
+      "sha256": "cbac40ee33e2f4dd38a3cdac5c6ae7f339ee85cab40ee0426a1ca4de860b858e"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/compose/advanced/add-isolation.tsx",
+      "sha256": "74265c14dfbe2da9bfe25e4c0b16faf4072b3d1cbfdf4969c17714a67f8965a9"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/compose/containers/show-compose-containers.tsx",
+      "sha256": "58054d912872eac05f2bf53da4e8ca9e8c03e2e04f637d6a2bb5b80096ec17e2"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/compose/delete-service.tsx",
+      "sha256": "6b96d8d2d9de85757450b06557661b0013e39c03e7b461607d8ae9251abf930c"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/compose/general/actions.tsx",
+      "sha256": "69d9ede69b873eaaf315373537ad26d9f09c70c9d9c0db291d570e6212909b6b"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/compose/general/compose-file-editor.tsx",
+      "sha256": "18060743fe06880cd0ea319dfe7ec6c7962b144685970b821c5e8b6faeb52e22"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/compose/general/generic/save-bitbucket-provider-compose.tsx",
+      "sha256": "3dec7f5217637ca35f01fba3b231ded104fd867b59419cf4e6394d2c5db94101"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/compose/general/generic/save-git-provider-compose.tsx",
+      "sha256": "eef68af0cfffa4e5814874f8d76403b0f99de8b673176b0c451882564b6b3815"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/compose/general/generic/save-gitea-provider-compose.tsx",
+      "sha256": "1994fd1f39674324d94d42c77f31721548ebfaa9f9bf5bd7dc02a7126d7bd5ef"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/compose/general/generic/save-github-provider-compose.tsx",
+      "sha256": "4af999e3868b06c0279d50097fbae011e91afc5492a4667e1bd78234971bf358"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/compose/general/generic/save-gitlab-provider-compose.tsx",
+      "sha256": "94b21aceb09d0bc974b4cd1eb9cb339c90d4dbf3a07d7dd64fe606eedbb8de65"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/compose/general/generic/show.tsx",
+      "sha256": "05d6cb7ad5e163a2d881b219093b075574424574d3484500dc625bbfcd638ee2"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/compose/general/randomize-compose.tsx",
+      "sha256": "6ec1cfd1a8847ea2107f9c506bb51f485f6d0bd7589642ba256aadd2f41e62f3"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/compose/general/show-converted-compose.tsx",
+      "sha256": "5fc647ee0137d25938f50d6baa2a6ce6ed7743fc13e7fedb4ff5f858a5bbbcaa"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/compose/general/show.tsx",
+      "sha256": "08b53d19d60dbf7c1cc4bcfbd4d24800b3106ee6a34a4e84c9dffe276d043d18"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/compose/logs/show-stack.tsx",
+      "sha256": "1dca8cf6a58b993bfd362da632c4699a20f96831d873d79b6737807a77af5c7a"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/compose/logs/show.tsx",
+      "sha256": "7bf9985e38b24262991659ecaf3d0aca04f18d1783f2aba1dc5b89dca3ae9e38"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/compose/update-compose.tsx",
+      "sha256": "7983602fe25b99be8f8267b23cdfa18b6866109ed898c5870064856e3b8d5802"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/database/backups/handle-backup.tsx",
+      "sha256": "ecff996c54b5a405f11d5a71b5f1706c1bafad5e2cf0d84746735d84b9107739"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/database/backups/restore-backup.tsx",
+      "sha256": "12bec3b7b1ef2ce7666b579555e8c07b99e16479a52f7ec3716541aab522b379"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/database/backups/show-backups.tsx",
+      "sha256": "c01b8a9e36af52eef88c4d12ad7fda1f12e9f99bef0f96d758af756859baa7f8"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/deployments/show-deployments-table.tsx",
+      "sha256": "0c462ac967d30a6834f1a7b4e1e631d5dfe9438dc537663bf4c7113af7d18aec"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/deployments/show-queue-table.tsx",
+      "sha256": "60c483b21c4807fef1f1143f033120725a04097956d200d7de4b0748be307e0e"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/config/show-container-config.tsx",
+      "sha256": "7816e2dac0c36967cb590f954b7610249070d78bbb241ce3ca5d33c56dfae15e"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/disk-usage/show-disk-usage.tsx",
+      "sha256": "9ff988b3225f26375eb18f52ee7395f447bd54a7dd2edfba4181cfdc9b073f0e"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/events/show-docker-events.tsx",
+      "sha256": "9c1e7937407e8fd2b43d6456e23626b4a56226be24ca1bd5622c547126b1c350"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/files/files-explorer-modal.tsx",
+      "sha256": "4ab1c91aba364e6ca051e761391eec1ac94851001c5aa44e0b07182581f480ca"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/health/show-health.tsx",
+      "sha256": "746ea9758ea7ad2600d3760207353e75c0bebb339afb96f9fec98d87314f47cb"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/images/show-images.tsx",
+      "sha256": "cd3792abad23bdd5b3324161389aeabb0f940b7b0803d199ce720973f305d796"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/logs/analyze-logs.tsx",
+      "sha256": "d1752b76d96a758aae593287583fdfec6e41e74224a4d6ee49aa2bd8809a2381"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/logs/docker-logs-id.tsx",
+      "sha256": "e33c5efac9a397ec18a813a308afb13f7f898745e6682f0d4a832dd3564c4b6b"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/logs/line-count-filter.tsx",
+      "sha256": "933dbdf96cd715efb51a8f0e77e74b859b2e6c739312e3a3f060e2112a82f5f0"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/logs/show-docker-modal-logs.tsx",
+      "sha256": "f8675dd8d48b50b38a61d945871d2e2a140f176a0c258cc5310355866e6be8ae"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/logs/show-docker-modal-stack-logs.tsx",
+      "sha256": "4990793a6e3c22bf9144cfe4c02d552bc82320ccb7b8f1c848d354a90e72f6c8"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/logs/since-logs-filter.tsx",
+      "sha256": "d26e47f99fc058766660e1b9e666b98194f39431b7e66705135069beab523204"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/logs/status-logs-filter.tsx",
+      "sha256": "26f03e01e6e16e42b9b534446de2ff8030cbc158e598c04825d311f29f6e2591"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/logs/terminal-line.tsx",
+      "sha256": "01fff410eee5353b54b5dd652d036b8e431db9b79cf17f99d114911e33382a2f"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/logs/utils.ts",
+      "sha256": "67b8b9cbe2f25dcf8cecfb3ec977848ba6460f7970597455c68775aa4d069448"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/mounts/show-container-mounts.tsx",
+      "sha256": "446bae13c4e97a77422e3cdfa0f9e7814fb64647add2f639e76dc39b41eefc7a"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/networks/show-container-networks.tsx",
+      "sha256": "3585b8f4c86d71e206300af8ad8d0fc37c106196f2c4aac62872f1e0b5ae6b8a"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/remove/remove-container.tsx",
+      "sha256": "64b50913bd7bc4a91c6551fab0dc9c3f7224eba3ff250609a2158054ff10a213"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/show/columns.tsx",
+      "sha256": "f1b9917894271b934a483105cbc760e30a98a944279588fb7099bf2534bd02c2"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/show/show-containers.tsx",
+      "sha256": "9000326326fdd68ea5560f5eb02936def4776a82baf6a9ba94e5749fc70dc7d7"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/terminal/docker-terminal-modal.tsx",
+      "sha256": "86c22cc212a8a7b63368a88213148786afbbeb55d23544013cabecccc2b4c92e"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/terminal/docker-terminal.tsx",
+      "sha256": "45f8d002b3ffbc4c162b6446b2b689748ddcebe21afbf8e69c9eb29a25008888"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/upload/upload-file-modal.tsx",
+      "sha256": "d882c4f27f7ee2982fe68db8fd66fc1edec7583fef63fe3c7d2186c8f4b84cd2"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/docker/volumes/show-volumes.tsx",
+      "sha256": "c1552594e1670feb351a4f48c9879fe8edefc75a1522832f8239b30220d1abe7"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/file-system/show-traefik-file.tsx",
+      "sha256": "9e0004bf7119a656d6688279c24ef9e05196235ce6883058726489682ac105ef"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/file-system/show-traefik-system.tsx",
+      "sha256": "92d942e2c4f272a482210d8ada29e125e73123e5d883a2627e04764bee116dc8"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/home/show-home.tsx",
+      "sha256": "70ebf9f0960683d85f144e3ca8a14a99ce6734113f12ff5e8d93e0fa454db7e8"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/impersonation/impersonation-bar.tsx",
+      "sha256": "d3a3a0dd19308fbae065b71788a6db27212ff0f5395083209f819d1f483859bf"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/libsql/general/show-external-libsql-credentials.tsx",
+      "sha256": "cc40b67f6b732f8cf2c0c865c503861d38f71f4840b60965a2468f6779d17825"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/libsql/general/show-general-libsql.tsx",
+      "sha256": "9e6814ae8920da3734df194e15ab1a4eee348f5dbb68510292133f508477d675"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/libsql/general/show-internal-libsql-credentials.tsx",
+      "sha256": "3ace7995d61886916210baf2a36e3f57ef068ba3eab1a457d5e3d9bd8eb14a51"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/libsql/update-libsql.tsx",
+      "sha256": "74f6f957efa1897e0672d089418f252af9c114f8b8905beb94c671eede69cf71"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/mariadb/general/show-external-mariadb-credentials.tsx",
+      "sha256": "b44f5094118103e28d6c309f01ab95682bbee2d3fb4a59ada47d149ec1f53beb"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/mariadb/general/show-general-mariadb.tsx",
+      "sha256": "2ecb146480eaa32230696b243ce3119d428a35d8f272ba6ea89a027f80ce26cd"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/mariadb/general/show-internal-mariadb-credentials.tsx",
+      "sha256": "c0968987ec1adca9133c4bd16c725d654f7cfb124dc7cf68b502e9d5a93c7f92"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/mariadb/update-mariadb.tsx",
+      "sha256": "1248c22fb72336135076fb3a7e6ce4f70b4e8be5e4c3cf1bfa09b4acd85f8ff2"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/mongo/general/show-external-mongo-credentials.tsx",
+      "sha256": "60b45b985fbdc93185471bc1f3b1f4b738c286c02201bf31a81bb8bed1f0f96e"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/mongo/general/show-general-mongo.tsx",
+      "sha256": "516793d38ca9e88d6bd94c3aabe4b48c1ed20ffa1bc1d1bc99660e478e6a1f2e"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/mongo/general/show-internal-mongo-credentials.tsx",
+      "sha256": "08e88bb0e0b02fe9667c3de66526ce49d81c9348467da2fd5640cc5535f0827b"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/mongo/update-mongo.tsx",
+      "sha256": "1d5655c2282a008ee3c6feea98702ccae1913a05c33b7f4845c0a27a9c5e0022"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/monitoring/free/container/docker-block-chart.tsx",
+      "sha256": "4455a889916c0358c82f753685ee31dff10e4f65a65f493a0da982c68eae7a82"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/monitoring/free/container/docker-cpu-chart.tsx",
+      "sha256": "fd31348edf92e3373116c419a75727bc30b20eddd5f63653a9b5bec8408da517"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/monitoring/free/container/docker-disk-chart.tsx",
+      "sha256": "c13edc1d7eebeceba7f9c76eaa02be9d6058a9bb999fbfc95cb6b43f784d718e"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/monitoring/free/container/docker-disk-usage-chart.tsx",
+      "sha256": "81cbba4cea7959848806b36443aecad9a67b383d69d46c40dc044b6274dd618c"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/monitoring/free/container/docker-memory-chart.tsx",
+      "sha256": "e7ccf779f64d1b86f80e6036788fbc9ef350411a8df2435dbc59a83c6db51629"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/monitoring/free/container/docker-network-chart.tsx",
+      "sha256": "c1e3ccbe4eb6c0d6a321fb720e51d307f0cd7315cfe26f240872521c6612acf2"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/monitoring/free/container/show-free-compose-monitoring.tsx",
+      "sha256": "9d246953fde0640ec85fdb31fe68dfaaf5d379ee078bf26637fbbc99486c26c1"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/monitoring/free/container/show-free-container-monitoring.tsx",
+      "sha256": "76d7d6f47257fb8fdec2e6669378baf31ce2d0f69e25fff821b926d1f517bf2c"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/monitoring/paid/container/container-block-chart.tsx",
+      "sha256": "4b97a3ba2f45a14eebd460aa9a44fcecbac6a25e2d2b8a6af73fbc9cd5dffc11"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/monitoring/paid/container/container-cpu-chart.tsx",
+      "sha256": "29a4a7803a5f16c42ec2b4fdd635499550ccbfbc7ceecbacc2148831c88c8508"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/monitoring/paid/container/container-memory-chart.tsx",
+      "sha256": "e4e2f14f37617a484ab3f58205d27fd28e1c9a81fc0051546e7165a322fa33c6"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/monitoring/paid/container/container-network-chart.tsx",
+      "sha256": "330bd1cb5e581cc38e3787f03ff26bd01e8097d655396449b49205cdd0c6e3f0"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/monitoring/paid/container/show-paid-compose-monitoring.tsx",
+      "sha256": "0f272c75297b55a3bee8d98fe73d4fe9a53d5f95196c4b92ab5bab8cd2056ba2"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/monitoring/paid/container/show-paid-container-monitoring.tsx",
+      "sha256": "46d2f899881edb5f31a5cf24accc410a534cc1da24280cfb26b3477a70ebd9a5"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/monitoring/paid/servers/cpu-chart.tsx",
+      "sha256": "e9a0ab58c3446a33ba8eab6669e6e7ff57d42a50b8925801cff2c2ef8724a6e1"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/monitoring/paid/servers/disk-chart.tsx",
+      "sha256": "f409d34f6bd908c99c281ffcc49a6de05c7f3a2a3402fdd5e95c25deb90a78e0"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/monitoring/paid/servers/memory-chart.tsx",
+      "sha256": "699238426f53cfda045f099b262b2d72f1e0358fac316e30cf9072c35b02d314"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/monitoring/paid/servers/network-chart.tsx",
+      "sha256": "07819371096ee72d12cd1fb308ce6dec466fc2b3860200cc9c152aa11243071c"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/monitoring/paid/servers/show-paid-monitoring.tsx",
+      "sha256": "17cb8c07a3cc79450e51e41b247a798bdef6039c4805241f056fae8009599f8c"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/mysql/general/show-external-mysql-credentials.tsx",
+      "sha256": "599ef2dd3520f72fbbae8b2fbd1450bf3f84df270b3a5d08f6d296291762ea73"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/mysql/general/show-general-mysql.tsx",
+      "sha256": "a12fbc36cf44abfb3fea928ff53e18bc33115249e8970f2cea6f42e2eab4b443"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/mysql/general/show-internal-mysql-credentials.tsx",
+      "sha256": "968e2db925d9e84254dc01f17f7020f82ddc705158d27bac3b5ff7d1c0e8f30b"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/mysql/update-mysql.tsx",
+      "sha256": "ab22b64b2edbaee2175b86897b98f1ffda26ae14c0e682bf5871bdb1a5a8b195"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/networks/assign-compose-networks.tsx",
+      "sha256": "4ecfb35585c6d87dbda05f24da1f0794beb1118f5295b927e4bd696c1af331ea"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/networks/assign-networks.tsx",
+      "sha256": "befa6a5d89644f0c5abd84a10410d26a91dc406caa462c1a7b7eaf7f6d6ffe71"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/networks/handle-network.tsx",
+      "sha256": "67bfbbd159aecce61f4a73d720446608bcf9fd65744f30e59788ff6a01e92701"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/networks/show-network-config.tsx",
+      "sha256": "8e9bbc5e1a8ed9ca64d988faea1e811a303d9ad61d650905d5d60b400f724161"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/networks/show-networks.tsx",
+      "sha256": "a21954263a3156d59b9a6cb082a7bb55954ea771e6c23fdc6a450fdc063406ae"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/networks/sync-networks.tsx",
+      "sha256": "8f2269d0c3d6cdb31aae2cd99985abf5ec79398846233be19db63d11eb0c75c1"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/onboarding/font.ts",
+      "sha256": "c37f3e76022543d6d78bd2a3bfbb57e019c59d8aba3783bbea4fe30d92815178"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/onboarding/onboarding-lock.ts",
+      "sha256": "22c17c971603dcba23079e0e581ee924ed22d582f63f0f9b572fb53600eb9443"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/onboarding/onboarding-wizard.tsx",
+      "sha256": "7b6981440e34b996244a39b2a84bf9054af10e5b7b17170f3bdd47b17bc542b2"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/onboarding/steps/complete-step.tsx",
+      "sha256": "60e86c817295ae7dea88eae84cda9ffef1e3728d3a8bc872f89221affff57c5e"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/onboarding/steps/deploy-step.tsx",
+      "sha256": "4d8ad9e4b7a43c0c02d67789a4b3477e28d6aed02a7e8a61936a14ea19fe6e08"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/onboarding/steps/plan-step.tsx",
+      "sha256": "6d62ac2bf29f84867f21f992115d929684423eb3de4cf8327cf4fb2bb5bbce7d"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/onboarding/steps/project-step.tsx",
+      "sha256": "263b5afaeaefc929890f59f7f1451c3337346095d2e651eb6fe4e19f11549920"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/onboarding/steps/server-step.tsx",
+      "sha256": "205cdd17c741d4c86736501fc5c10cf981d5a57de754943944df19483a2d1abf"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/onboarding/steps/welcome-step.tsx",
+      "sha256": "2cf030faac4e73c75fe04932c5a2e9eef82cc7c523cec06c128208e102c3aaec"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/organization/handle-organization.tsx",
+      "sha256": "291bd060c414259ca518874f83e4ff343b93ba9c66e8b8b5db68f03719d06167"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/overview/show-overview-backups.tsx",
+      "sha256": "ec000e66e0c9bd5bd73e1a64f9459595cefbe7e976623704ff80042c216ab861"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/overview/show-overview-deployments.tsx",
+      "sha256": "2d80ba636c56e0122eade4cf206a5730e4390157ede7540249626e98626d7b56"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/overview/show-overview-domains.tsx",
+      "sha256": "62cd357ee029d5bd6826ccf8d0b1759cc5f769c64cb23c4dad1c505c5b90ba2d"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/overview/show-overview-services.tsx",
+      "sha256": "ecc00244ff9138c25582f9023e94b85cb71618992c017c36dd5f1b6bf6504867"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/postgres/advanced/show-custom-command.tsx",
+      "sha256": "23981fd44e31b1b4b043ce639227c737fd7a89474d23c07c2e0597be39a65332"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/postgres/general/show-external-postgres-credentials.tsx",
+      "sha256": "7b200fa621555d7df32d16569bb7ae0aef99413d13c1deaa260438e5a2df66d5"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/postgres/general/show-general-postgres.tsx",
+      "sha256": "5349b6bfb23092f30e1cced65fd17affdef64cc9d69ca0c92d5b6af9d3f271ef"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/postgres/general/show-internal-postgres-credentials.tsx",
+      "sha256": "6ed9ab72041334bbfc70829b84ca713cf1b526eb8ab422e5ad1dd672815635b6"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/postgres/update-postgres.tsx",
+      "sha256": "e4f64a6a96d6c311e18e59167cf5cb23ac935607cb1e09d3b243b37f43d359ed"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/project/add-ai-assistant.tsx",
+      "sha256": "267dfdb19ec78b8c6635c4b85a282d2459668ab177f1796e772f0f6156dffcac"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/project/add-application.tsx",
+      "sha256": "f0aa92f8f2a15619a08a3fa076932cea5002944d157afdc7b6c5fbdf198c9f9f"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/project/add-compose.tsx",
+      "sha256": "324b3502d58a8a25726ade262cd800b6e4aaf58d57c16c73951b82167fd11ebd"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/project/add-database.tsx",
+      "sha256": "defa0fa87d11cf32b6c03159c460f27227794fd5fab4f6c45beb1adbef3ed18f"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/project/add-import.tsx",
+      "sha256": "31449a7b7ea668b2b95b629017376ded55413180066c96eff579f2148565d890"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/project/add-template.tsx",
+      "sha256": "cb75186fdba2583a10a327b703c6bdc4b5b9cf023a0a278a49f0190d36013904"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/project/advanced-environment-selector.tsx",
+      "sha256": "08f3cda759f98cbb019423e01f4fe76bdf4ca47c347d2ee166e8a56ac4271b29"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/project/ai/step-one.tsx",
+      "sha256": "b4c8515340f3665a9ccf7cd92d8164f9591e697c36e07a493752248040c4ff77"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/project/ai/step-three.tsx",
+      "sha256": "ef19c1dd71a5700a19e16fb68839c3b4acdf9fc7ac90dee3fbef3bb1417f0fd1"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/project/ai/step-two.tsx",
+      "sha256": "454e6cb516c000e5f8746a79c0f216d6268145890c53743599df83205097d2b0"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/project/ai/template-generator.tsx",
+      "sha256": "796fa7f6208dacfcabfdfaa364c1e04fe3b5b208b46ce95d5e2f12e8c6401029"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/project/duplicate-project.tsx",
+      "sha256": "0eab0ee492dfb64a31d127f4d3fd7d28941e84693b16c778d8af266d7b8bc74c"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/project/environment-variables.tsx",
+      "sha256": "82a81506a8e7b179a4d588e8e7df480c546fbf9aac964e5033e42cc03257cdcb"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/projects/handle-project.tsx",
+      "sha256": "d03b741510c6337229c895dd5d238c9baa88001bd5f308a55c79d3f8cbb16317"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/projects/project-environment.tsx",
+      "sha256": "1e3909e8965ea4a292c010d6f9d807ac3494a00a1bf5546259b7ab0955582184"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/projects/show.tsx",
+      "sha256": "11fc8b8a9ca32ec3387caafe49e4f4c2329fff6eec6f6e53c4c8b5161080a149"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/redis/general/show-external-redis-credentials.tsx",
+      "sha256": "2064a54ef091cdca0416a29dc8f10a62bd4737b2ba86374e48aa409c42014ae0"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/redis/general/show-general-redis.tsx",
+      "sha256": "7dae5cac58563fe8ac47ae6a81619eeec06f632e37aa4864880d06cbc1d89b02"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/redis/general/show-internal-redis-credentials.tsx",
+      "sha256": "9c2f55fed35506b329075e43e66b5302314117c89f2fea9a59ce9eb572b3b080"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/redis/update-redis.tsx",
+      "sha256": "788012bb2a9837f24a56de0f40c44ed6534e279a9ccf761d593287fde50ece6a"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/requests/columns.tsx",
+      "sha256": "6b18770e074d64157c6f21aa3183287e84ea5999168d1a12c5eaaa409a906b62"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/requests/request-distribution-chart.tsx",
+      "sha256": "dc727ad50ead68386478a7d78c704244e192e3849228629beb93ef0717a9f8af"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/requests/requests-table.tsx",
+      "sha256": "5777330367f5df4b9a42eda1f4c2445fe422a0b1e831f59ac5980f2940c4c835"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/requests/show-requests.tsx",
+      "sha256": "50f93a245343f9f496820e0549449931e68b7cb8298f3699f904ab994d04028f"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/requests/status-request-filter.tsx",
+      "sha256": "ee667767a2a8f66ef4dc0850e0a626d8034d3925576f7159b9cfe3060b2d0721"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/search-command.tsx",
+      "sha256": "dbcfd22e0872c2b5ac558aae6929a4d342860e7ffeb34e562754ba6ff85765fa"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/ai-form.tsx",
+      "sha256": "8fc49642369d0ef37c1382ea7188edb3c511e61e98f3c87d5719f7e19b1ecf2a"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/api/add-api-key.tsx",
+      "sha256": "186af9d2b5a77fdda1c7321dbf01123a8ff51130879591b2206a2c02fccead79"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/api/show-api-keys.tsx",
+      "sha256": "f60952d1ef9db4d9e937a67da62312c27bd858926ba1b3c26da494d4cd26291b"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/billing/show-billing-invoices.tsx",
+      "sha256": "916aa2ccc1a8f146a5407202f90b0cd9eb4fc2a575a8b53e98a5cdc95aee2673"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/billing/show-billing.tsx",
+      "sha256": "4caf572ba8ec2369f5c4f921dda2248751998008c7b8af62af4af237be08dad2"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/billing/show-invoices.tsx",
+      "sha256": "239e2913dbdd31c80e4bd0298b680c8db2afb2757ed7cf5a0408b7e789668675"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/certificates/handle-certificate.tsx",
+      "sha256": "99c729be599da19246c17d1a78a86ee8052b1bc98179b9d984bd5af1ab6e4451"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/certificates/show-certificates.tsx",
+      "sha256": "7e8aa853ca0f78e742960460ba8fe72be0962b17ef14ebf426bb2210f578fff1"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/certificates/utils.ts",
+      "sha256": "f52581daf9c9a95865157caa6575b3f85492f254870ce4cf46b14eefe6138fe4"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/cluster/nodes/add-node.tsx",
+      "sha256": "94a2006fc70db90cea90dcc744b35b1a335df9df083ed7368a273db554adbe07"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/cluster/nodes/manager/add-manager.tsx",
+      "sha256": "26e7f09ce5552f89ab9dc3f64182910486ffb915c52f1bf5904c264034456a14"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/cluster/nodes/show-node-data.tsx",
+      "sha256": "4c71f657aa34f5c5c28797b20ad154c0fb6eb2cfb6625554992e86d4f98fdede"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/cluster/nodes/show-nodes.tsx",
+      "sha256": "cb721ae5c720d5b3e6a3b1a91fe249c8d23da7641dfa43b0929414cb393e9f56"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/cluster/nodes/workers/add-worker.tsx",
+      "sha256": "7cdbfc757c1035234955ab90d60b3af57c0edd4c4c520d217d9ee2fae746c603"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/cluster/registry/handle-registry.tsx",
+      "sha256": "fa5def5b959e6bb5c1ec980e8fdddad1a03fb715525031e55bdd860526cb5ed1"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/cluster/registry/show-registry.tsx",
+      "sha256": "f8169824b748c0a1666d90abec71b9bdff3ff584e6a367d7ce5f88af2ff20082"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/destination/constants.ts",
+      "sha256": "038c29b804374b725512271ab9c8d8b27d7022414418b12ea5a076715f19598d"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/destination/handle-destinations.tsx",
+      "sha256": "31e3f7182621c8c2f462afea0b2563904148656ec2f134e125b58b41fd3dcf74"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/destination/show-destinations.tsx",
+      "sha256": "b6c3bae344d732f31c92f649643412cde1871215d92fd70ab8dbbc1bbd78d98e"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/dns/dns-record-panel.tsx",
+      "sha256": "75526029c1c757bd66d4483ac0f379cddf55dddf605f24607f66d5515d01d34b"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/dns/dns-record-type-badge.tsx",
+      "sha256": "ec1f061b4ddb15773be5fb00592b578af1a583256b076aaa42c4b3ae95a318af"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/dns/handle-dns-provider.tsx",
+      "sha256": "7eb67c1078fb135a0164a37146ce14e699cfc7b57b694d6ce9b8dcddf081a8b6"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/dns/show-dns-providers.tsx",
+      "sha256": "c9c7cf2e2f922b0137270310860ca171afb384275921f6efe9ae6766938ccfb9"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/dns/show-dns-records.tsx",
+      "sha256": "27bdad64daa831df3517e188fc1205ea163d1bf899e966570f3054046b93a331"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/dns/show-dns-zones.tsx",
+      "sha256": "339b8dca1d7ec11cf3fa576680d26d75dc8111e3d193cd3ee139519d2b16333d"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/git/bitbucket/add-bitbucket-provider.tsx",
+      "sha256": "b1d05062ab86c019f37c9bca884de89c04837671665a71ab40f1a10336dcdbdd"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/git/bitbucket/edit-bitbucket-provider.tsx",
+      "sha256": "8ee4f57b3c286d4ef3018840b09236d2927fe1100c7a8417c210cae1c0f8f9b8"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/git/gitea/add-gitea-provider.tsx",
+      "sha256": "5652fc6562f61b8c335e36696d4a72dd3df8d17527e420737f10ec03f382ad4a"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/git/gitea/edit-gitea-provider.tsx",
+      "sha256": "425126bffd035bf84c97b7bf4b0cd3b709961876c7cdf5c5a2c595f6dd00dc64"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/git/github/add-github-provider.tsx",
+      "sha256": "0a916707246d7a61ba8e4f5feeeea9c29425d562de1cc05c0aa37db2f0ea8ccc"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/git/github/edit-github-provider.tsx",
+      "sha256": "994a293bf660a3216dd16d2632de93bb65dc41645dde79c08eabc6db5d96a2e4"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/git/gitlab/add-gitlab-provider.tsx",
+      "sha256": "18f31c37685300a1ed1079e330352d38c2792ee2fc8d72ef54382e0c54b0cdd2"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/git/gitlab/edit-gitlab-provider.tsx",
+      "sha256": "541c233f1dcecfb8c8fc7a08cf5dbef1c96b01cfaa64990465fef4e190d6a2f3"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/git/show-git-providers.tsx",
+      "sha256": "a2eb238e6840bd2ad6b8fa691ba8153f833d2f64f3d06045924bbc570c117496"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/handle-ai-providers.tsx",
+      "sha256": "11a6e74a877cc8602f9a20cfb5c82c41969689102414c2f0d61ac640c2af124b"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/handle-ai.tsx",
+      "sha256": "20cf9fd69a6c405329ea2e9c840dca3390ff66f7504fb5263e6803d4876fd1fb"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/linking-account/linking-account.tsx",
+      "sha256": "d453c3e7446d86d08fc5e51d66bf3c775f76b6181eb53b07fdc9125c7d4e71cf"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/notifications/handle-notifications.tsx",
+      "sha256": "115b135d3ef3bfda620d76ab1320f013dcf298f83a7d7924950f0ee99d9ca576"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/notifications/show-notifications.tsx",
+      "sha256": "37c06b9128da8aa8d61e4c5f06d504c9556c5e088c1111b279a3feb270c69930"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/profile/configure-2fa.tsx",
+      "sha256": "9b681dac99b8f6e9e0b4d558238b377538d8506ef4c1e0c1204dafda4d965539"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/profile/enable-2fa.tsx",
+      "sha256": "0396a1bf70ca7f06cd9edb49def892ceaf5bc6d64b4233a9a3beb6ee03ae10ae"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/profile/manage-passkeys.tsx",
+      "sha256": "c732e085f3240353a02ff5367284603a4ff5042e4f7c4ac92b9c9776f66d98fa"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/profile/profile-form.tsx",
+      "sha256": "637669477982536e58387df6feb96793ed885b11ee0910acd4c4d3c3b6a82722"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/servers/actions/builds-concurrency.tsx",
+      "sha256": "c8a7cfaaf6a3c38fb08edaf985b505f5a5fbe622472321c0a2e0b1b2f60cd82c"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/servers/actions/show-dokploy-actions.tsx",
+      "sha256": "cb8a48ddc8231f6f3d670ef10891fa76ac0b76a87e051b845476cc2d7e623b05"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/servers/actions/show-server-actions.tsx",
+      "sha256": "f09b0883a8eb9cad6b3af0024531b198ec83754e01a4576d9e890c439e185ba5"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/servers/actions/show-storage-actions.tsx",
+      "sha256": "40c81d3bc99984dc7b59654e00b07056a8878358692437d606485f9f8f325d17"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/servers/actions/show-traefik-actions.tsx",
+      "sha256": "fe53880e0747a3e527da73d3c58991d8820928c0da89b8af9587bbd3b0538a70"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/servers/actions/toggle-docker-cleanup.tsx",
+      "sha256": "c7afd3c11d3faa0b6b2b2011df278a11c51adcc326297d7584fa37d43242a0b2"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/servers/actions/toggle-enforce-sso.tsx",
+      "sha256": "044b3f8eb1aba47d9461fa888b28fdc3be9966dee74601ce178c7d7a9df59d70"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/servers/actions/toggle-remote-servers-only.tsx",
+      "sha256": "587b334c516a9b76fb7f677c31f6e8d1056f60201eb08079fdc85964720e38e9"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/servers/delete-server-modal.tsx",
+      "sha256": "68bdb6a956ebe81ae40e349e334db3aa758a17a7b5b01fff5bec1e26f5970605"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/servers/edit-script.tsx",
+      "sha256": "f289936991dd33c0ec37a5b9cd848ec588e5ae9475d11c4776010cf1dc249f73"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/servers/gpu-support-modal.tsx",
+      "sha256": "651c645863ea71b7622d6cba0f67af908a30e9abb0904f8f7510fff3850be156"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/servers/gpu-support.tsx",
+      "sha256": "b8bbee0d2c1aabf2533c60b73c5b3111aa47a1982c2ab7acc694ca2cf5d051ec"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/servers/handle-servers.tsx",
+      "sha256": "6da77bd3dc26ebf25992b7a231190b9df51eb7577b021b6335c7b3ab676f8d33"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/servers/security-audit.tsx",
+      "sha256": "a7099686290d8dc791c139fdb70be72fcd02dc4388897c39bd18c92c3861fac4"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/servers/setup-monitoring.tsx",
+      "sha256": "39edfb24f189984d2ea5bff190dc21ba2fa7835b29c36ece0cca19e4a2a137b3"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/servers/setup-server.tsx",
+      "sha256": "e0f937d72d50505cebd2c788c5a5e1e84b28388386e9ce06fb247d34e988fc9c"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/servers/show-monitoring-modal.tsx",
+      "sha256": "5d331a5e1d58b99aa3246a079ba90b8df3d1d707ae4cb9b356fcd1adac56ca7d"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/servers/show-servers.tsx",
+      "sha256": "a04c02cc3e5bf9df01e3fee49d9d24f97cd9678d9217aeb5de5ca909726532f5"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/servers/validate-server.tsx",
+      "sha256": "8502448fa25917a61a31b6ea5e933d87cb8b0a858e3f19d0593eb4f80af0c669"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/servers/welcome-stripe/welcome-subscription.tsx",
+      "sha256": "ec68efb934814b7e3bc419541db09a6519e6471c4019280b8954d5a101b20621"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/sessions/show-sessions.tsx",
+      "sha256": "ffb451a291c00101c6f61b37ef6001fb775813fd3dc26be7630f939aade06cdf"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/ssh-keys/handle-ssh-keys.tsx",
+      "sha256": "1400ff0711c2e91adb88b0d376918ee9f8413148fc49996f2fa7b072fa63ac0e"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/ssh-keys/show-ssh-keys.tsx",
+      "sha256": "fba21cb7406b01683aef3d59319de0a0c19a2c97cdd42c78f73fd71ddc66759a"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/tags/handle-tag.tsx",
+      "sha256": "9c40a91c1b0f33f3a72b917b34bc2f25424656caab694d7b3433ad9b04ef69f1"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/tags/tag-manager.tsx",
+      "sha256": "ed2562719883ac05039763f2f68a222540137b28a92dd51678cc6f299e278bec"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/users/add-invitation.tsx",
+      "sha256": "990aa5b107d22661dbce85c2688ee97b47845f32d525cc7195283f1f2ce792a4"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/users/add-permissions.tsx",
+      "sha256": "ae8842f7f8b252f367dd373f33f69226b7398e33586739baed7a152f009edc7f"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/users/change-role.tsx",
+      "sha256": "fc07edd059c0f56c70c68b3b2e89ab1d8a8dd91eb26e16d8570f38aecd4c0946"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/users/show-invitations.tsx",
+      "sha256": "46793dc37fa25085005332d5412ff7f2e2437cbc0a5fa4eacdd61571f1ab860a"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/users/show-users.tsx",
+      "sha256": "cf847f791b4e203df8270d24b39927c470de80397c89099eed0d56b9ff45601b"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/vault/handle-vault-provider.tsx",
+      "sha256": "2ccf9c09bdc958dfd9a1c80efcb23baf8b6a26adf4db57ecba90ea41c5f47436"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/vault/show-vault-providers.tsx",
+      "sha256": "ef1ad3b2cb4b7464e2716119988d0d54a59aa2b3a300fbd3e9db056c2236e9b2"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/web-domain.tsx",
+      "sha256": "4701dd7dc2d64fd5757caa18ebfce74c247e17550cb325401c1d1e28fb7e0683"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/web-server/docker-terminal-modal.tsx",
+      "sha256": "ee9dfbfade6243b628bb9fab4cc862040f5666ae51c934ccaf62828ab7640e57"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/web-server/edit-traefik-env.tsx",
+      "sha256": "c46491de140041eea5f91128beaa7d165c29324c9bfa897b6aefa2011f660a84"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/web-server/local-server-config.tsx",
+      "sha256": "28744e4609e2faf3b746a7f57da2fcca8df05aa57de6bc2c14e58a9809060518"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/web-server/manage-traefik-ports.tsx",
+      "sha256": "7defc01f77d81d17f72e91f781f7b5cb48b78b1ca5b2aaf12d4414c2ae086f7c"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/web-server/show-modal-logs.tsx",
+      "sha256": "ebd9b054776eb3527cef6f6a1970bd8eb91e04196a0a2ec77b0e838f3a0839dd"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/web-server/terminal-modal.tsx",
+      "sha256": "14b7b7ef5bbe975282f1c65189fb6de98a07d57afc90af563331f3d869f92c86"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/web-server/terminal.tsx",
+      "sha256": "989cf42e98153565e3e51c7092b2339d5ff7fb0abebbcac87b1a235365c54db8"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/web-server/toggle-auto-check-updates.tsx",
+      "sha256": "baba7df576cdaa63e359e99d806484a3723c6f33af008d83f77c2b3edec8b2ae"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/web-server/update-server-ip.tsx",
+      "sha256": "2f6d375dad6027f3b2f49f88d9dfb0b3dfddd6f2b0a6067a34d136c7d6b52cbc"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/web-server/update-server.tsx",
+      "sha256": "cad5e7c8e2e2f3fc76ea9e0283e81d7fae796de6d5973267721334107e93cf4e"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/web-server/update-webserver.tsx",
+      "sha256": "5558626909c054a6b130c3f721208ab2088db45ea6aea79ecb4f82ff83fe5be3"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/settings/web-server.tsx",
+      "sha256": "5e992a335d49893246e41e872bd344c0be01422411a1498121f947224aae924d"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/shared/rebuild-database.tsx",
+      "sha256": "a4d755d8454d049d59d30752ca3ccd1000bc9b4eedab5dac1bd45d1144396039"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/shared/show-database-advanced-settings.tsx",
+      "sha256": "411f4760f71bf26c055d1460b5f75d57aa38654f19d092c3d642b20d6ca0ba60"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/swarm/applications/columns.tsx",
+      "sha256": "5402365a47294ad06861f071bd22e19f56b291caff32dad617a025b7460654f2"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/swarm/applications/data-table.tsx",
+      "sha256": "648579aeb1a4c7124efd653c3406c990ff20177543e273e56a8c4e2fd7a551d8"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/swarm/applications/show-applications.tsx",
+      "sha256": "5925e8dd821e92104a71e646632bcae394c02d4b9f31025230769ebadf2578e0"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/swarm/containers/container-row.tsx",
+      "sha256": "547eea4f89b188fd7dc4f715524957a4667dc42eb85cfdc0379b53f70377b374"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/swarm/containers/empty-states.tsx",
+      "sha256": "ef1ae985440c5328de28100239a1e7e848fdf37d8c3c092052ccfd00b453b9d3"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/swarm/containers/node-section.tsx",
+      "sha256": "d411a925824b0b9fee260354e90f396fa6b7e79716651129a2ecb97a81567e90"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/swarm/containers/show-swarm-containers.tsx",
+      "sha256": "8f39ba863d01fa1fe4ac4bdba6963931296dff2f9f992e25a3aa2ba375998348"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/swarm/containers/summary-cards.tsx",
+      "sha256": "fb8adf48f79c2eac86a19ade265e883f8abcabe1ab99fecb6aeaf5d1c01204f5"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/swarm/containers/types.ts",
+      "sha256": "895bee8f48df53efa0d76c8461d57561712315344488405c4e13e6349b755c80"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/swarm/containers/utils.ts",
+      "sha256": "51e2ba5750068640ddff07a8e71007b1b246d8d0a94d4c6339079b55c8b6b6c6"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/swarm/details/details-card.tsx",
+      "sha256": "48e4a20eda355a0859e9bc115843bc5a8a0cad62ef9fa89c4540e63dfb24a68c"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/swarm/details/show-node-config.tsx",
+      "sha256": "cd5285436b47232de634fa7eab6cc85bc816246926232cdb09818d3d32c95ef0"
+    },
+    {
+      "path": "apps/dokploy/components/dashboard/swarm/monitoring-card.tsx",
+      "sha256": "95a34caf5d0d8fc22aa82604e3b17c4ea5278edf175d351ef7157cd689b5cd42"
+    },
+    {
+      "path": "apps/dokploy/components/icons/data-tools-icons.tsx",
+      "sha256": "37f3b3a9288294debe71be1204964596638d665b924006fbede584cd8605bce2"
+    },
+    {
+      "path": "apps/dokploy/components/icons/dns-provider-icons.tsx",
+      "sha256": "664aabd323e286e9e3cccb712219517266163883b3bb78ba6a3a5149c9422701"
+    },
+    {
+      "path": "apps/dokploy/components/icons/notification-icons.tsx",
+      "sha256": "c64f28d9f7e61b770c265fe5ee898a91b164942a01f422063a4bca50ffbb3878"
+    },
+    {
+      "path": "apps/dokploy/components/icons/vault-provider-icons.tsx",
+      "sha256": "b4b9ff25f5ccb970451c4bcc36610a1443b70b5bb1a03393aa19d1212e53c035"
+    },
+    {
+      "path": "apps/dokploy/components/layouts/dashboard-layout.tsx",
+      "sha256": "97734934e1098b3f7dfb6c64553535dc0ba48e2d745396177e9a12982da08feb"
+    },
+    {
+      "path": "apps/dokploy/components/layouts/onboarding-layout.tsx",
+      "sha256": "282594897daf3231426b92c583e7b422d0240070c1bd90c125ff089748a2d726"
+    },
+    {
+      "path": "apps/dokploy/components/layouts/side.tsx",
+      "sha256": "b1554bb60b6f98f379c7ba6a4e11223f13422ebba2c445954d5c29a660d4df3d"
+    },
+    {
+      "path": "apps/dokploy/components/layouts/update-server.tsx",
+      "sha256": "fc0430ef913cf9b66f0c58f4df934b22b1df41e90311efc41683a149563ae53e"
+    },
+    {
+      "path": "apps/dokploy/components/layouts/user-nav.tsx",
+      "sha256": "56cb77f8841a87fcf15bb4db85f8cd265b73a77eacc2c7a9b053d4aa34c02a43"
+    },
+    {
+      "path": "apps/dokploy/components/shared/ChatwootWidget.tsx",
+      "sha256": "dd495b6a05395ab7832460e1cca614936a6462154d1c6a874c499341f0d6e81d"
+    },
+    {
+      "path": "apps/dokploy/components/shared/advance-breadcrumb.tsx",
+      "sha256": "978fbec1bcefb861c4848ba73b42d6fa74d9ebd641c358cf177319916c71b1db"
+    },
+    {
+      "path": "apps/dokploy/components/shared/alert-block.tsx",
+      "sha256": "f8a1d36f563f9e0ee7e8c23ce22934ceab5abb58a594b3f467a0cdb24b6a0f84"
+    },
+    {
+      "path": "apps/dokploy/components/shared/analytics.tsx",
+      "sha256": "41a53de78d8a7290555a7d51bae8a50a71145fa3ef564ce8123b3febd9356c53"
+    },
+    {
+      "path": "apps/dokploy/components/shared/breadcrumb-sidebar.tsx",
+      "sha256": "c065adb2fd510b81c38677b7b73109a5654454f34145f951e9cdfc6f707e2d08"
+    },
+    {
+      "path": "apps/dokploy/components/shared/code-editor.tsx",
+      "sha256": "f3476b1d74d30e3913079a00dfc8d8ef2a25c880b95f391cc951459032d81a58"
+    },
+    {
+      "path": "apps/dokploy/components/shared/date-tooltip.tsx",
+      "sha256": "7bde636a2493593e1a6f818dd1fe07e8d444e34ff0502efb50a9f28c98ccae3d"
+    },
+    {
+      "path": "apps/dokploy/components/shared/dialog-action.tsx",
+      "sha256": "248773d84e64850b8de88074cbe4e033654b48b47e08fc1569066d822eefbb2b"
+    },
+    {
+      "path": "apps/dokploy/components/shared/drawer-logs.tsx",
+      "sha256": "e70ccb24387ae61d2dbd773483f183b1a5cb778713a22f25e129c6edcca1e603"
+    },
+    {
+      "path": "apps/dokploy/components/shared/env-autocomplete.ts",
+      "sha256": "d0268c92b590161fc84ba99b0c43fee0611cf07c6752c90ed65d0e2553c4d138"
+    },
+    {
+      "path": "apps/dokploy/components/shared/focus-shortcut-input.tsx",
+      "sha256": "0d2dcec59baff72ee3f106d919fd0fac8293949d4b63f47c29f12328eb5287ff"
+    },
+    {
+      "path": "apps/dokploy/components/shared/logo.tsx",
+      "sha256": "6aa54f9b4493d6737ab2fe9749a6364abf0940e1240f54646a7a29a2f7333635"
+    },
+    {
+      "path": "apps/dokploy/components/shared/server-filter.tsx",
+      "sha256": "91d815cf044c97c524aed9737ce43a5b632b57310b03c0a268d18bc88bc05bb8"
+    },
+    {
+      "path": "apps/dokploy/components/shared/status-tooltip.tsx",
+      "sha256": "0451db0e66e3eba59bfe803a139cb2ea8b1fd19a720d595f000af9c2cfb09be9"
+    },
+    {
+      "path": "apps/dokploy/components/shared/tag-badge.tsx",
+      "sha256": "c2cf7d7eae1779294db3ebd55f6a41f7539c3ed165e426c44d1c5994bfefab83"
+    },
+    {
+      "path": "apps/dokploy/components/shared/tag-filter.tsx",
+      "sha256": "76f0a568726fdfe11e52942b27507a1b6d85e4501935f890ee072d77b7388fbc"
+    },
+    {
+      "path": "apps/dokploy/components/shared/tag-selector.tsx",
+      "sha256": "38545abaf649dcb7ccc3a0821b0c3c722ce03ee29237f7f108cc36ee905ad7f6"
+    },
+    {
+      "path": "apps/dokploy/components/shared/toggle-visibility-input.tsx",
+      "sha256": "2e48347cc5891da4c000dacaaeea3bfc7bfabf205d2db465fd9843c86145a55f"
+    },
+    {
+      "path": "apps/dokploy/components/shared/truncate-tooltip.tsx",
+      "sha256": "d2d6cf67ff062c98881e3856b2c7b59aca5c40720a351f807c54f378a1c8efaf"
+    },
+    {
+      "path": "apps/dokploy/components/shared/update-database-password.tsx",
+      "sha256": "7150d0df75494994dabb132a76671a31f06e709827b3cb08f36256545fb46014"
+    },
+    {
+      "path": "apps/dokploy/components/shared/vault-import-dialog.tsx",
+      "sha256": "097b94904173478c1c5335c628d34b9deb64fdbe86114274015665ed2ff0aba7"
+    },
+    {
+      "path": "apps/dokploy/components/ui/accordion.tsx",
+      "sha256": "01c94fa61740cca80d8188e73a1959fe4f5d2c6bfa26369dfa2f41e9f3ea60c8"
+    },
+    {
+      "path": "apps/dokploy/components/ui/alert-dialog.tsx",
+      "sha256": "6a614669c887f4aa407eaec6664de9ecc89639d2347c9d6c2e2e4e62644f9166"
+    },
+    {
+      "path": "apps/dokploy/components/ui/alert.tsx",
+      "sha256": "b2f393072321c3f9bd83552953954a2e8432bd1f149c879a3ad309c0e2046d13"
+    },
+    {
+      "path": "apps/dokploy/components/ui/avatar.tsx",
+      "sha256": "cc50d2c5611fc725093794fa1dc8f6a0b87f00012cef219c93f59caec9b3908a"
+    },
+    {
+      "path": "apps/dokploy/components/ui/badge.tsx",
+      "sha256": "f0da6485979ba4e408b29e660b1889952c6c833885834b391b9a620509c1d083"
+    },
+    {
+      "path": "apps/dokploy/components/ui/breadcrumb.tsx",
+      "sha256": "12e4fc31cac7cae526f6004c24a5f82d1ef1918514e137e2281b66d139ad8dc7"
+    },
+    {
+      "path": "apps/dokploy/components/ui/button.tsx",
+      "sha256": "c2796626afcc7b1d8ec59f52b6e54cd720e8b848fd9c2dfc49522661091703c7"
+    },
+    {
+      "path": "apps/dokploy/components/ui/calendar.tsx",
+      "sha256": "002c4a710bc0862aed712d0733e1e09dd96656116108095e56857ca69e3398eb"
+    },
+    {
+      "path": "apps/dokploy/components/ui/card.tsx",
+      "sha256": "86c52a4b0fb4f4d8a0feb983f6bdc7b6b3ff22e3750690bfdb3cd3777c12406f"
+    },
+    {
+      "path": "apps/dokploy/components/ui/chart.tsx",
+      "sha256": "e7d8e12b0e8abd2b34fbdd4fa917a51b57ce3de500a861cca55cdb40cc646799"
+    },
+    {
+      "path": "apps/dokploy/components/ui/checkbox.tsx",
+      "sha256": "2afdf6a5acef62b4b61efc41adfcbd5dcad13d5244ee63809258b3c966e4583a"
+    },
+    {
+      "path": "apps/dokploy/components/ui/collapsible.tsx",
+      "sha256": "e3d6c716d15b424c512e5da99b320b0abad2d85e78b00656efcae879de3fcef6"
+    },
+    {
+      "path": "apps/dokploy/components/ui/command.tsx",
+      "sha256": "92e863097b4783ad8c240e6ccf7a1d02727f1faf3bcd92b4c8b4cb36c572478d"
+    },
+    {
+      "path": "apps/dokploy/components/ui/context-menu.tsx",
+      "sha256": "fe70022473a35c395b75643bb89bdf7c928aac4875e34a66788d0b683f35a5fd"
+    },
+    {
+      "path": "apps/dokploy/components/ui/dialog.tsx",
+      "sha256": "219a63682fb15341dca7d52dd5484d9b1818de8c0012d1609d45c4f4dc14221f"
+    },
+    {
+      "path": "apps/dokploy/components/ui/dropdown-menu.tsx",
+      "sha256": "0da1e4db0aa074d44466b56fff48a13ab8f81e237c8ceb1ef020aeaecfe571f2"
+    },
+    {
+      "path": "apps/dokploy/components/ui/dropzone.tsx",
+      "sha256": "6e4a2a6c263cccbc860f45adedda8c362be934ca7fece7312dd9eb8c21c7e96e"
+    },
+    {
+      "path": "apps/dokploy/components/ui/file-tree.tsx",
+      "sha256": "cbaf8470f5f3300a7fd22d20fe56e5c07d8ef0df4194d55733afea30e05f3c01"
+    },
+    {
+      "path": "apps/dokploy/components/ui/form.tsx",
+      "sha256": "66b17a149789ef62d2b5baed541effbf399842f8c552decd5a68b871a2c25567"
+    },
+    {
+      "path": "apps/dokploy/components/ui/input-group.tsx",
+      "sha256": "6b49d83b5f9c605caba9cea548b01c3acf4bf3770ca1c8e990bce5cee20900e2"
+    },
+    {
+      "path": "apps/dokploy/components/ui/input-otp.tsx",
+      "sha256": "b67ee0445d7f1fd68122dc5e08666608f2bfea512589cd3c17359c5b9da38582"
+    },
+    {
+      "path": "apps/dokploy/components/ui/input.tsx",
+      "sha256": "d553c8bae32ba3f8f3bec6ec6c08d55180eca672315f4771c7583a92b6a36794"
+    },
+    {
+      "path": "apps/dokploy/components/ui/label.tsx",
+      "sha256": "274e6358855bb222fd1f2be7a1ef57da3fdcc54a508581e07e508b1e347e8cc9"
+    },
+    {
+      "path": "apps/dokploy/components/ui/modeToggle.tsx",
+      "sha256": "b34c345add206e1ab1a536fb744568c880a15090d2ce298bc5cb6c904a4bccf7"
+    },
+    {
+      "path": "apps/dokploy/components/ui/nested-popup-context.ts",
+      "sha256": "46dbf2f69c784017afa6752ddec796a2e3674365f3c18533be5d36876eb6f449"
+    },
+    {
+      "path": "apps/dokploy/components/ui/number-input.tsx",
+      "sha256": "91a8b2d21ae4fbafa6844da1bd78e95a515fd06a4d57d3f4df6a2401109ad69d"
+    },
+    {
+      "path": "apps/dokploy/components/ui/popover.tsx",
+      "sha256": "3a6bc7579d459f6d1b6a0f3f50e9950fa3b8638631d73582a1f05f154de8931f"
+    },
+    {
+      "path": "apps/dokploy/components/ui/progress.tsx",
+      "sha256": "807bcb66c8d194e33dc116edc22723f47db66c08544a63d69bdeac810079da27"
+    },
+    {
+      "path": "apps/dokploy/components/ui/radio-group.tsx",
+      "sha256": "215707f70233683de0cb119ea7678992e25a423129e582fce7440b8e24a5c8b2"
+    },
+    {
+      "path": "apps/dokploy/components/ui/scroll-area.tsx",
+      "sha256": "e784cc76f863b409340e0c7d251fe4db0d644031e5cdf93e3ef354a783b8e879"
+    },
+    {
+      "path": "apps/dokploy/components/ui/secrets.tsx",
+      "sha256": "d8d72c397d5aeacb6a281f80cafa28c1dc0d0aa9351601b0b7d77603188b4fd6"
+    },
+    {
+      "path": "apps/dokploy/components/ui/select.tsx",
+      "sha256": "ad0518d356f697410bbe5e4f8e56fc7fcc6ea14a8aa864a8545b5c4529303b3a"
+    },
+    {
+      "path": "apps/dokploy/components/ui/separator.tsx",
+      "sha256": "ebd0f64ea8d95489d59ec6dd674e2a3f9cf4b7ed6eae7df78e17c278f6da11e9"
+    },
+    {
+      "path": "apps/dokploy/components/ui/sheet.tsx",
+      "sha256": "60633261e6a2e85070d760efe79d0d504ea23aea25d56ca6f521efd923b910f7"
+    },
+    {
+      "path": "apps/dokploy/components/ui/sidebar.tsx",
+      "sha256": "6d8ced408b1341e78ad3dfc473e2019135f89c8deb32ab0751d9f140c188a42e"
+    },
+    {
+      "path": "apps/dokploy/components/ui/skeleton.tsx",
+      "sha256": "de575dfa9c461080b419ec51955c4ec4f2a85982b9fed8da2d0052f5acbc43b1"
+    },
+    {
+      "path": "apps/dokploy/components/ui/sonner.tsx",
+      "sha256": "ca7ac43bebc895818ad570c7a4842cf2817037de718cd7fb0f2d9476b629af92"
+    },
+    {
+      "path": "apps/dokploy/components/ui/switch.tsx",
+      "sha256": "e17d5a8709a94b4c77a4eed3854be5e43bd559e255fa77aee04437078301965a"
+    },
+    {
+      "path": "apps/dokploy/components/ui/table.tsx",
+      "sha256": "05ba7ac0f5987fa7ad22eaef105b115b09f68351afbb876bf1febf2d6f34cdac"
+    },
+    {
+      "path": "apps/dokploy/components/ui/tabs.tsx",
+      "sha256": "d0793b82fb63bb12db9e3cd17df766bff2bb61a39dc7ee678a940f9007856734"
+    },
+    {
+      "path": "apps/dokploy/components/ui/textarea.tsx",
+      "sha256": "ce6b9edf02cf0dffb5c8dde087406b457a49dbf0b948e77f48d7c14a90cb754b"
+    },
+    {
+      "path": "apps/dokploy/components/ui/time-badge.tsx",
+      "sha256": "56e84a5a7128b3e23c0a435a0ab26c8e3acf8f94e4e99d4be8b7d07f5523ca04"
+    },
+    {
+      "path": "apps/dokploy/components/ui/toggle.tsx",
+      "sha256": "f766720d0f75b7f6f824189af542493b7c5607b3d3c6cd3d5c917785f14c1b95"
+    },
+    {
+      "path": "apps/dokploy/components/ui/tooltip.tsx",
+      "sha256": "ad12912c4b148e79ad4d85f2bd37125eaf67683c68bd6df4f91b98cbb73aef93"
+    },
+    {
+      "path": "apps/dokploy/pages/_app.tsx",
+      "sha256": "4ba989aa92d214f9311450c816fcaf117cba63217576c6fc7b723173d8485e4c"
+    },
+    {
+      "path": "apps/dokploy/pages/_document.tsx",
+      "sha256": "01063f655d2e6165b7c1a848c253a84ae8a722b9bb9bb03cf3df4a8094486de0"
+    },
+    {
+      "path": "apps/dokploy/pages/_error.tsx",
+      "sha256": "451d27309b7b99f9e798207263458d726561a3e64a7817b526c8e0e9ea573066"
+    },
+    {
+      "path": "apps/dokploy/pages/accept-invitation/[accept-invitation].tsx",
+      "sha256": "1b19c258e2a12e79a1c3c4cc8e9aea236bd95548c51fec613f195ac53ee59fde"
+    },
+    {
+      "path": "apps/dokploy/pages/api/[...trpc].ts",
+      "sha256": "5e0b251db170b94c1cf0272a814a444cce3926a2af9a99177ab7e544b1b07eb1"
+    },
+    {
+      "path": "apps/dokploy/pages/api/auth/[...all].ts",
+      "sha256": "7f252b4629f9358f6a097843b0c190554f65f33bba349cd73d109c85a3fb22b3"
+    },
+    {
+      "path": "apps/dokploy/pages/api/deploy/[refreshToken].ts",
+      "sha256": "5858a6ae2b5f8ca8995815df9ab9bd8f5c7088af7394b7d0416b1c2762ad9b2c"
+    },
+    {
+      "path": "apps/dokploy/pages/api/deploy/compose/[refreshToken].ts",
+      "sha256": "59ed543a2a42c35924722931216bd3a8527cdec66774626fc9ae4970aee79861"
+    },
+    {
+      "path": "apps/dokploy/pages/api/deploy/github.ts",
+      "sha256": "667c714a56d250af324c8ad2fb10c7591c57d022161b4ea936a658882073715b"
+    },
+    {
+      "path": "apps/dokploy/pages/api/health.ts",
+      "sha256": "9f2c844ca6638807a9ab509e71a97c29a21461665475858f20e95af43dac3fc4"
+    },
+    {
+      "path": "apps/dokploy/pages/api/providers/gitea/authorize.ts",
+      "sha256": "243edc87d0c8418551eade4f5c5098d64743c76353e10502b6094f5508e9536a"
+    },
+    {
+      "path": "apps/dokploy/pages/api/providers/gitea/callback.ts",
+      "sha256": "9a80cbb3e87250208c3edaf4b589cdec56b1a1047fbd1e6c6c104aeb3ef76488"
+    },
+    {
+      "path": "apps/dokploy/pages/api/providers/gitea/helper.ts",
+      "sha256": "2363c83796d8b30be49ad6c1e0223c53a80f87a8f238e46d6ec0f99f657e2743"
+    },
+    {
+      "path": "apps/dokploy/pages/api/providers/github/setup.ts",
+      "sha256": "7afb964da67ea37771cded2b239d3e457ce308443201ce8b288329d590dd2042"
+    },
+    {
+      "path": "apps/dokploy/pages/api/providers/github/webhook.ts",
+      "sha256": "b8ad69f1e6b6b01ab72ee53687d2722cb25c4c0cd1192368629d51f40ae7e36a"
+    },
+    {
+      "path": "apps/dokploy/pages/api/providers/gitlab/callback.ts",
+      "sha256": "8e508175050b6673ae858312ebd0ad21821a135d17c5df32d35fc3c38a28e266"
+    },
+    {
+      "path": "apps/dokploy/pages/api/stripe/webhook.ts",
+      "sha256": "7f6b0ffc1a0808c4753416b81738b1f7d15fed9f3797fff771856c09f4a1f68b"
+    },
+    {
+      "path": "apps/dokploy/pages/api/trpc/[trpc].ts",
+      "sha256": "d6d3a6284a562573ca3aeb583b3244110a46cb50519840cf2772f7def925ac00"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/deployments.tsx",
+      "sha256": "c9c54e9fc23be3f0d6b6d2fa38658f727a7f7cad814a283de022f4ffc3947b93"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/docker.tsx",
+      "sha256": "02e4f32d9f33584abb77d5bc922a4d000b9b7eabb362c202841b0755012a072f"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/home.tsx",
+      "sha256": "560031c97b615fa1a2014757cc38bca58d6ccf6afc1604b00897129b2ae25cfe"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/monitoring.tsx",
+      "sha256": "86db1e2219e3ae0adb6c37c7f967e223efb8a19b96e80882bc7121c61da03072"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/networks.tsx",
+      "sha256": "96af23f42cb9ec61a954abbdbc49973efdcef3f9c29196fa784f93740fea4a20"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/overview.tsx",
+      "sha256": "18dcd148c474ea4d85e014f54c1a4a438f41636978d0420c3aef84fd01ce6a7d"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/project/[projectId]/environment/[environmentId]/services/application/[applicationId].tsx",
+      "sha256": "593c8a53ecde6d040b656b48316b5a5afeb6d32c35ef464c3106bda2b6166723"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/project/[projectId]/environment/[environmentId]/services/compose/[composeId].tsx",
+      "sha256": "51738a8c2101c7e48fdf099d58af7412e1b3d97b3ad92a7aafec729a7b42a4ea"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/project/[projectId]/environment/[environmentId]/services/libsql/[libsqlId].tsx",
+      "sha256": "55d2275b8d8c12eacdba8c29eea346b780775520d2dbff2dfdf43992185984ac"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/project/[projectId]/environment/[environmentId]/services/mariadb/[mariadbId].tsx",
+      "sha256": "c4d450bc19d418f9dfa7e74f5c15b2c5675ea332a94373d9ec7385ed292ab416"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/project/[projectId]/environment/[environmentId]/services/mongo/[mongoId].tsx",
+      "sha256": "6f7fdde2567b581de4c7282373a70b541735d24824518046c5b85c2f560d6e91"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/project/[projectId]/environment/[environmentId]/services/mysql/[mysqlId].tsx",
+      "sha256": "7620e7e151b822d9e5e4df7b21ca61cc5c399504d9016e422d0118cbe161d938"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/project/[projectId]/environment/[environmentId]/services/postgres/[postgresId].tsx",
+      "sha256": "883b67d3a566a89e04ca7d324f907178d7923b3c90a4f1d0af5de46c73ad978e"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/project/[projectId]/environment/[environmentId]/services/redis/[redisId].tsx",
+      "sha256": "d352524e7f67d3756730ccfd7890478ef2a2c9ad7469bbaeffd60f6fbfd8d038"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/project/[projectId]/environment/[environmentId].tsx",
+      "sha256": "af5dd29d1aa10fe2549e40f844ca491a6b45c4280f9b1226e18ae456397d73b1"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/projects.tsx",
+      "sha256": "d1e380660b8e3de6439b1865488bfd50d87210a03d57ac870e0797dfa868d616"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/requests.tsx",
+      "sha256": "f1aee5d8e444a665e569507636112c72b498c6a28d23b4663775dc4aa0a8cf4b"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/schedules.tsx",
+      "sha256": "75e2a376e4ead9f2aa88f9868983ddf9b09019042c19b8c2ffcb9fa97045c33a"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/ai.tsx",
+      "sha256": "bfee920254e478cdcd3dea9201198063e7100d97f8bdc19b47f5686a0d969b4b"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/audit-logs.tsx",
+      "sha256": "2b6bd3b68df8b100bd84f6a1c09cb4dd086c1e742d864bdf1848866379197590"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/billing.tsx",
+      "sha256": "0456ce8e31651a780e0deab5f2268ab564bb65a5a2fbba91a3c3e94f98999924"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/certificates.tsx",
+      "sha256": "94401412c3a397b6c6654f6f25ce83d033ef4ca827a7efe3c53957ccd7eadaf3"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/deployments.tsx",
+      "sha256": "da68c4d6cfd02a2d05ca13fa84af3a62b508bd2f1857efb9f0a34f9c22bc342b"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/destinations.tsx",
+      "sha256": "34e88d5180357f779570ea81bc814f3d6a23df0f4c1d8d6745756cb9f14c6166"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/dns/[dnsProviderId]/[zoneId].tsx",
+      "sha256": "574c636fd4fb6a42585c42c0deaef16c82f4db2abda9ea0add7a8485a9cd3f5d"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/dns/[dnsProviderId].tsx",
+      "sha256": "4f856609da972664640d8765e5956e83988a8947a3fd6cd7b768662ca256d095"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/dns.tsx",
+      "sha256": "05790ae76325355d73b5b33a5b67c767a7bdeb4042b5d3fbf20e5a2ef270c507"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/git-providers.tsx",
+      "sha256": "b29ffa6b70357042d608ec3ced6a6e1b3aeb7887d4183859afa09082e4979df0"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/invoices.tsx",
+      "sha256": "638df0a6b7d6cab7c1598f2a097bd5dbe371dcfa9756ee084ef8930f3dbafc4a"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/license.tsx",
+      "sha256": "6774671773b30afa53f6efbca2a739713115e27174727d87fcffd2f621e5983a"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/notifications.tsx",
+      "sha256": "c64cc67c084b4abd659fa11dead68073cfbea3b2fc2aba50a744f362acb8ee46"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/profile.tsx",
+      "sha256": "8e96dfb35e5079f55591769ffb6539b8521108d4242795fad7ba9115eaccc1ac"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/registry.tsx",
+      "sha256": "5be68f1550a1bcb834f2b38ec67e31bacf2aa82547f0ed3d022af4387a1c7cb1"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/secrets.tsx",
+      "sha256": "ffbd69a89aa15de4a88985c8f3bb0b5fe1d80134c35513ed4a835ca564518f14"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/server.tsx",
+      "sha256": "3a85f6dc407cc5fb1021cff4a456709b41969baf063b3000602a1d5c31c0bb05"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/servers.tsx",
+      "sha256": "c914cf3aa0c4bc188e9433a040f96694436f3e1bd8cb3329165b27c25ceae913"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/sessions.tsx",
+      "sha256": "1e6d2912cdf46115fc66905bdf00b791a7ccb0c707996e18b9c06766dbbddc7c"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/ssh-keys.tsx",
+      "sha256": "00ef3416bfc3c33c75bfe0de4745d3dcd18e71051743531ce892072accaee34f"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/sso.tsx",
+      "sha256": "6a16856f091ccbfaf59be46734917469a46649919c132eddd2c9f7b4852346be"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/tags.tsx",
+      "sha256": "a1b74170f85a4a821928c521a238f33b05dec00f343d098674ec7b92ed5ce4b8"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/users.tsx",
+      "sha256": "f6dac2f6098590467069d022cfd93e8023e97bfb6a3089d2a24426b28b5557ec"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/settings/whitelabeling.tsx",
+      "sha256": "f825e29340145787c593cec016ea9739135f8fcebf52258e1d179795510bea1c"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/swarm.tsx",
+      "sha256": "9600e1a1009aaf2115a8b83d2e46117555cd8c3b6e57b4f9fb9e2281acec49d2"
+    },
+    {
+      "path": "apps/dokploy/pages/dashboard/traefik.tsx",
+      "sha256": "7ee03bb331df2747b90857296c78bb095103e00d66bd56bc071d20025fd5fbc8"
+    },
+    {
+      "path": "apps/dokploy/pages/index.tsx",
+      "sha256": "0d6e2aa505654a342efe3a1ab5ebe71d1cca5deee080dcb37f018e24bca2ba45"
+    },
+    {
+      "path": "apps/dokploy/pages/invitation.tsx",
+      "sha256": "9355f065e6f9252ed616103ccf8aad52714b9ad91693d29ac26ba1173e7bd048"
+    },
+    {
+      "path": "apps/dokploy/pages/register.tsx",
+      "sha256": "5a9d1122d4477c973ef7e837a6635ea4dfc8b029ef3ffe75804708f12054d155"
+    },
+    {
+      "path": "apps/dokploy/pages/reset-password.tsx",
+      "sha256": "2f48139a4a82c9530df59b23730f6df49de6463d103697d909a17347266d6ac0"
+    },
+    {
+      "path": "apps/dokploy/pages/send-reset-password.tsx",
+      "sha256": "b6e041f01af1f8bba1e452c2c50a1e3c752ee14277e97a93e7aee2740501871a"
+    },
+    {
+      "path": "apps/dokploy/pages/swagger.tsx",
+      "sha256": "c916fc9a681c0c724dc09ed16105fa24cc3b4869282b0f49785ec86027e85a9b"
+    },
+    {
+      "path": "apps/dokploy/styles/globals.css",
+      "sha256": "78ec796e6d840d0dff3c8861273386919b8d84b308e588ab577b706c58a26f9d"
+    },
+    {
+      "path": "apps/dokploy/hooks/use-health-check-after-mutation.ts",
+      "sha256": "485b4ce9204609866bc9cf3e6ac90d8721814ea4fb97562d01f782503f38d9a5"
+    },
+    {
+      "path": "apps/dokploy/hooks/use-keyboard-nav.tsx",
+      "sha256": "2e8112549846b15b9702f4554a952cefeb769aa42c0006e85ee1f93b6c3ac3cc"
+    },
+    {
+      "path": "apps/dokploy/hooks/use-mobile.ts",
+      "sha256": "58af17c3d3236af98c3a83fde3707caa3bb97e56558d206f8c82819cc6ef783e"
+    },
+    {
+      "path": "apps/dokploy/hooks/use-mobile.tsx",
+      "sha256": "58af17c3d3236af98c3a83fde3707caa3bb97e56558d206f8c82819cc6ef783e"
+    },
+    {
+      "path": "apps/dokploy/hooks/use-sort-preference.ts",
+      "sha256": "16816a8ec7e250a20b1c53fb3ac40e91d5237500afda55c545fd78e7d4fff8e3"
+    },
+    {
+      "path": "apps/dokploy/hooks/useLocalStorage.tsx",
+      "sha256": "57270d0f61cac78223d899d99374a666512b67fcd10ea8562438e5568a64062c"
+    },
+    {
+      "path": "apps/dokploy/utils/api.ts",
+      "sha256": "902fb2f87d4c73d5067389fa687117f42c654c1ef3b44b641f954c95a35e66fc"
+    },
+    {
+      "path": "apps/dokploy/utils/create-server-helpers.ts",
+      "sha256": "f5866787312ab0e92350c7f0ba487c42cd7f1244f7fa86c2fa70698982519c9e"
+    },
+    {
+      "path": "apps/dokploy/utils/gitea-utils.ts",
+      "sha256": "6510bfef25d3f30823dee507433218cac39fa3c3dfc209d2289ff9e6a8df62b4"
+    },
+    {
+      "path": "apps/dokploy/utils/github-utils.ts",
+      "sha256": "7ced81bf71a367dc6fa8e3790d1d59ab875deb8233873d1826c7c2d25b51ff9a"
+    },
+    {
+      "path": "apps/dokploy/utils/hooks/use-debounce.ts",
+      "sha256": "7e648ef9eb147b5bf5a00186e950154d8dc4ea9f18a863e9f21e2be2a9117683"
+    },
+    {
+      "path": "apps/dokploy/utils/hooks/use-url.ts",
+      "sha256": "abdee96af1ddcf591dab10448cd8bc5659fcbdbffe6be9d8f24401653785b13e"
+    },
+    {
+      "path": "apps/dokploy/utils/hooks/use-whitelabeling.ts",
+      "sha256": "d9eb7b8953dca3006aa88e7e056a932b8179c302710eb0af028cf5c24f55815b"
+    },
+    {
+      "path": "apps/dokploy/utils/image-processing.ts",
+      "sha256": "bf84c0508a64d8b69dcbe39c1afa5d6574e9e1e89f41ebec77ff3bf2ea9cc5be"
+    },
+    {
+      "path": "apps/dokploy/utils/sanitize-svg.ts",
+      "sha256": "7a8daef5f8ef2bd9e633ce0d01522e7ca2e71039b7eb587f7cce7375076c6c93"
+    },
+    {
+      "path": "apps/dokploy/utils/schema.ts",
+      "sha256": "0330bc2a05eebe5ba701288fc7641a2566eec7a63d3f433a7649d81c62152864"
+    },
+    {
+      "path": "apps/dokploy/lib/analytics.ts",
+      "sha256": "9cb4d29e8fbf3722cff2d1f89ed74898eaba8e38d09f55084e894dc18e6eeb50"
+    },
+    {
+      "path": "apps/dokploy/lib/api-keys.ts",
+      "sha256": "ae326cde50bb95446503416636af365bee93d3b03ce7b8f641ee1feb14dd0057"
+    },
+    {
+      "path": "apps/dokploy/lib/auth-client.ts",
+      "sha256": "b9bab8d6bc2046d10430543d50a81be4689baa98657bf9fddaf9bf3ecf035b93"
+    },
+    {
+      "path": "apps/dokploy/lib/avatar-utils.ts",
+      "sha256": "fcddc37a9536ce554a63ef63edde0feab489ee78a5e6a46575b7026c03ae9fcf"
+    },
+    {
+      "path": "apps/dokploy/lib/bundled-icons.ts",
+      "sha256": "0a930b0ce5cf31a872bb7e6ec9168c09bd6577c9efcc0921c27625fee7268972"
+    },
+    {
+      "path": "apps/dokploy/lib/password-utils.ts",
+      "sha256": "ef1964750728ec5ecf1c1ce0b1817c022d4bfa92009e4c85f8c1aa9ba7d6246d"
+    },
+    {
+      "path": "apps/dokploy/lib/slug.ts",
+      "sha256": "f1085e4c214518352aeea77a4532506051cc064cba5a22f8298e0fc4b0d23afa"
+    },
+    {
+      "path": "apps/dokploy/lib/terminal-keyboard.ts",
+      "sha256": "cbcaf8847bc0a91eaffc0a3702330da47e86c99cc02b448de599462b0a0c5040"
+    },
+    {
+      "path": "apps/dokploy/lib/utils.ts",
+      "sha256": "16d1b6bdc5fd61106c1e4411507270a3e4c17a8224f722878a1f2e3a3c459e52"
+    }
+  ]
+}
