@@ -870,7 +870,9 @@
     },
     {
       "path": "apps/dokploy/components/dashboard/settings/certificates/handle-certificate.tsx",
-      "sha256": "99c729be599da19246c17d1a78a86ee8052b1bc98179b9d984bd5af1ab6e4451"
+      "sha256": "99c729be599da19246c17d1a78a86ee8052b1bc98179b9d984bd5af1ab6e4451",
+      "importedSha256": "20aa3523d6e3f291ae7a6bf268a52b028b2d78b39f1ca2ea259922e7aaeb752a",
+      "modification": "Removed upstream example certificate and private-key blobs; no foreign key data retained."
     },
     {
       "path": "apps/dokploy/components/dashboard/settings/certificates/show-certificates.tsx",
