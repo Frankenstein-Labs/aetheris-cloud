@@ -42,10 +42,10 @@ import {
 import { api } from "@/utils/api";
 
 const certificateDataHolder =
-	"-----BEGIN CERTIFICATE-----\nMIIFRDCCAyygAwIBAgIUEPOR47ys6VDwMVB9tYoeEka83uQwDQYJKoZIhvcNAQELBQAwGTEXMBUGA1UEAwwObWktZG9taW5pby5jb20wHhcNMjQwMzExMDQyNzU3WhcN\n------END CERTIFICATE-----";
+	"Paste your own PEM certificate";
 
 const privateKeyDataHolder =
-	"-----BEGIN PRIVATE KEY-----\nMIIFRDCCAyygAwIBAgIUEPOR47ys6VDwMVB9tYoeEka83uQwDQYJKoZIhvcNAQELBQAwGTEXMBUGA1UEAwwObWktZG9taW5pby5jb20wHhcNMjQwMzExMDQyNzU3WhcN\n-----END PRIVATE KEY-----";
+	"Paste your own private key";
 
 const handleCertificateSchema = z.object({
 	name: z.string().min(1, "Name is required"),

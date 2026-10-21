@@ -7,15 +7,15 @@ import { resolve, relative } from "node:path";
 const root = resolve("vendor/dokploy");
 const manifest = JSON.parse(readFileSync(resolve(root, "manifest.json"), "utf8")) as {
   commit: string;
-  files: { path: string; sha256: string }[];
+  files: { path: string; sha256: string; importedSha256?: string }[];
 };
 
-test("official UI snapshot retains the pinned upstream bytes", () => {
+test("official UI snapshot retains pinned bytes except documented credential-hint removal", () => {
   assert.equal(manifest.commit, "05970e7b234d4742ceab2967490597fbde47dbdd");
   assert.equal(manifest.files.length, 481);
   for (const file of manifest.files) {
     const content = readFileSync(resolve(root, file.path));
-    assert.equal(createHash("sha256").update(content).digest("hex"), file.sha256, file.path);
+    assert.equal(createHash("sha256").update(content).digest("hex"), file.importedSha256 ?? file.sha256, file.path);
   }
 });
 

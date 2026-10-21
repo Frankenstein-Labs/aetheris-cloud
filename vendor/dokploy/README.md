@@ -3,7 +3,7 @@
 Repository: https://github.com/Dokploy/dokploy
 Reference: `main` at `05970e7b234d4742ceab2967490597fbde47dbdd`.
 
-This directory contains 481 unmodified public source files from `apps/dokploy/{components,pages,styles,hooks,utils,lib}`, excluding every `proprietary` directory. `manifest.json` records each upstream path and SHA-256. Copyright and licensing are retained in `LICENSE.MD`; `LICENSE_PROPRIETARY.md` is included only to document exclusions, not grant rights to proprietary code.
+This directory contains 481 public source files from `apps/dokploy/{components,pages,styles,hooks,utils,lib}`, excluding every `proprietary` directory. All are unchanged except removal of upstream example certificate/private-key blobs in `handle-certificate.tsx`. `manifest.json` records each upstream path and SHA-256, plus the imported hash and reason for that sanitized file. Copyright and licensing are retained in `LICENSE.MD`; `LICENSE_PROPRIETARY.md` is included only to document exclusions, not grant rights to proprietary code.
 
 Included: API/CLI key creation/listing, subscriptions, invoices, payment-method/portal controls, projects, application/Compose/database settings, deployment/log/monitoring screens, layouts, settings and UI primitives.
 

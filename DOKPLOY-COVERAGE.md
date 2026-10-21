@@ -3,6 +3,13 @@
 Official repository: https://github.com/Dokploy/dokploy
 Pinned reference: 53464e9096a0976e8e4a8f3a1908bc1054e45a37
 
+## Independent-platform source import
+Additional pinned UI snapshot: main at `05970e7b234d4742ceab2967490597fbde47dbdd`, stored in `vendor/dokploy`. 481 public UI/page/style/helper files imported with per-file hashes, licenses, proprietary-directory exclusions and no environment files or credentials. One certificate-form example blob was removed and its modification recorded. These sources are not compiled, served or represented as activated features.
+
+Public payment sources ARE available at this newer revision: `components/dashboard/settings/billing/{show-billing,show-billing-invoices,show-invoices}.tsx`. API-token sources: `components/dashboard/settings/api/{show-api-keys,add-api-key}.tsx`. Aetheris billing/subscription now share an executable adaptation with subscription, payment-method and invoice tabs; API keys use upstream list presentation with existing Aetheris data/actions. Upstream prices, trials, Stripe accounts and entitlement rules were not adopted. Actual payment processing remains disabled.
+
+The target is independent infrastructure, not mandatory access to a Dokploy instance. The existing connector is transitional. Remaining source screens still require adaptation and independent compute/storage integrations before they work in Aetheris.
+
 ## Attribution
 Dokploy Technology, Inc., copyright 2026-present. Apache-2.0 applies outside proprietary directories. See licenses/DOKPLOY-LICENSE.md. Dashboard neutral theme values were adapted from apps/dokploy/styles/globals.css; Aetheris routing and server calls are independently adapted for TanStack Start. No proprietary files were copied. No upstream NOTICE file was found at the pinned repository root.
 
@@ -23,7 +30,7 @@ The following screens currently present connection status and, when connected, a
 - GitHub/Colab direct repository notebook opening and actual GPU training remain unverified; existing local notebook generation is preserved.
 
 ## Licensed exclusions
-Audit logs, SSO/SCIM, custom roles, whitelabeling and Enterprise license management: not copied/activated. Dokploy Cloud billing/invoices and advanced Cloud monitoring: not implemented. No Cloud-exclusive functionality is promised under the OSS license.
+Audit logs, SSO/SCIM, custom roles, whitelabeling and Enterprise license management: not copied/activated. Billing/invoice public UI sources are now imported as documented above, but hosted Cloud services and advanced Cloud monitoring are not integrated. No proprietary functionality is promised under the OSS license.
 
 ## Existing service limitations
 Aetheris engine actions return 503 while no real container provider is bound. Model reference imports are metadata registration, not file downloads or hosting. Payments remain disabled. Storage usage requires actual provider read; 1 Go index allocation display does not establish a working index upload/quota enforcement flow.
