@@ -1,10 +1,13 @@
+// API-key list presentation adapted from Dokploy show-api-keys.tsx (Apache-2.0).
+import { Badge } from "@/components/ui/badge";
+import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "sonner";
-import { Plus, Copy, Check, Trash2, Loader2, KeyRound, ShieldCheck, X } from "lucide-react";
+import { Clock, Plus, Copy, Check, Trash2, Loader2, KeyRound, ShieldCheck, X } from "lucide-react";
 
 export const Route = createFileRoute("/dashboard/api-keys")({
   head: () => ({
@@ -84,9 +87,9 @@ function ApiKeysPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-end justify-between px-2">
+      <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h1 className="font-display text-4xl font-light ">Clés API</h1>
+          <h1 className="flex items-center gap-2 text-xl font-semibold"><KeyRound className="size-5" />Clés API / CLI</h1>
           <p className="text-muted-foreground mt-2 text-sm">
             Authentifiez vos requêtes API, CLI et SDK.
           </p>
@@ -100,98 +103,35 @@ function ApiKeysPage() {
         </Button>
       </div>
 
-      {/* Table */}
-      <div className="glass rounded-lg overflow-hidden">
-        {loading ? (
-          <div className="p-12 flex items-center justify-center text-muted-foreground">
-            <Loader2 className="h-5 w-5 animate-spin me-2" /> Chargement...
-          </div>
-        ) : keys.length === 0 ? (
-          <EmptyState onCreate={() => setShowCreate(true)} />
-        ) : (
-          <div className="overflow-x-auto">
-            <table className="w-full text-left">
-              <thead>
-                <tr className="border-b border-border">
-                  <th className="px-6 py-4 text-[11px] font-semibold text-muted-foreground uppercase ">
-                    Nom
-                  </th>
-                  <th className="px-4 py-4 text-[11px] font-semibold text-muted-foreground uppercase ">
-                    Préfixe
-                  </th>
-                  <th className="px-4 py-4 text-[11px] font-semibold text-muted-foreground uppercase ">
-                    Permissions
-                  </th>
-                  <th className="px-4 py-4 text-[11px] font-semibold text-muted-foreground uppercase ">
-                    Budget
-                  </th>
-                  <th className="px-4 py-4 text-[11px] font-semibold text-muted-foreground uppercase ">
-                    Dernière utilisation
-                  </th>
-                  <th className="px-4 py-4 text-[11px] font-semibold text-muted-foreground uppercase ">
-                    Statut
-                  </th>
-                  <th className="px-6 py-4" />
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-border">
-                {keys.map((k) => (
-                  <tr key={k.id} className="hover:bg-muted/50 transition-colors">
-                    <td className="px-6 py-5 font-medium">{k.name}</td>
-                    <td className="px-4 py-5">
-                      <code className="bg-muted px-2 py-1 rounded-lg text-xs font-mono text-primary">
-                        {k.key_prefix}…
-                      </code>
-                    </td>
-                    <td className="px-4 py-5 text-sm text-muted-foreground">
-                      {PERM_LABELS[k.permissions]}
-                    </td>
-                    <td className="px-4 py-5 text-sm font-mono">
-                      {k.budget_limit_tokens
-                        ? `${(k.budget_limit_tokens / 1000).toFixed(0)}k tk`
-                        : "Illimité"}
-                    </td>
-                    <td className="px-4 py-5 text-sm text-muted-foreground">
-                      {k.last_used_at
-                        ? new Date(k.last_used_at).toLocaleDateString("fr-FR")
-                        : "Jamais"}
-                    </td>
-                    <td className="px-4 py-5">
-                      <StatusBadge status={k.status} />
-                    </td>
-                    <td className="px-6 py-5 text-right">
-                      <div className="flex items-center justify-end gap-1">
-                        {k.status === "active" && (
-                          <Button
-                            onClick={() => revoke(k.id)}
-                            className="text-muted-foreground hover:text-destructive transition-colors text-xs px-2 py-1 rounded hover:bg-destructive/10"
-                            title="Révoquer"
-                          >
-                            Révoquer
-                          </Button>
-                        )}
-                        <Button
-                          onClick={() => remove(k.id)}
-                          className="text-muted-foreground hover:text-destructive transition-colors p-2 rounded hover:bg-destructive/10"
-                          title="Supprimer"
-                        >
-                          <Trash2 className="h-3.5 w-3.5" />
-                        </Button>
-                      </div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-      </div>
+      <section className="border-y py-6">
+        <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
+          <h2 className="text-sm font-medium">Clés de votre compte</h2>
+          <Button variant="ghost" size="sm" asChild><Link to="/docs">Documentation API</Link></Button>
+        </div>
+        {loading ? <div className="flex items-center justify-center py-12 text-muted-foreground"><Loader2 className="me-2 size-5 animate-spin" />Chargement…</div>
+          : keys.length === 0 ? <EmptyState onCreate={() => setShowCreate(true)} />
+          : <div className="flex flex-col gap-4">{keys.map(k => <article key={k.id} className="flex flex-wrap items-start justify-between gap-4 rounded-lg border p-4">
+            <div className="min-w-0 space-y-3"><h3 className="break-words font-medium">{k.name}</h3>
+              <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+                <span className="flex items-center gap-1"><Clock className="size-3.5" />Créée le {new Date(k.created_at).toLocaleDateString("fr-FR")}</span>
+                <Badge variant="secondary"><code>{k.key_prefix}…</code></Badge>
+                <Badge variant="outline">{PERM_LABELS[k.permissions]}</Badge><StatusBadge status={k.status} />
+                {k.expires_at && <Badge variant="outline">Expire le {new Date(k.expires_at).toLocaleDateString("fr-FR")}</Badge>}
+              </div>
+              <p className="text-xs text-muted-foreground">Budget : {k.budget_limit_tokens ? `${k.budget_limit_tokens.toLocaleString("fr-FR")} tokens` : "Illimité"} · Dernière utilisation : {k.last_used_at ? new Date(k.last_used_at).toLocaleDateString("fr-FR") : "Jamais"}</p>
+            </div>
+            <div className="flex shrink-0 items-center gap-1">
+              {k.status === "active" && <Button variant="outline" size="sm" onClick={() => revoke(k.id)}>Révoquer</Button>}
+              <Button variant="ghost" size="icon" onClick={() => remove(k.id)} title="Supprimer la clé" aria-label={`Supprimer ${k.name}`}><Trash2 className="size-4" /></Button>
+            </div>
+          </article>)}</div>}
+      </section>
 
       {/* Test endpoint card */}
       <TestEndpointCard />
 
       {/* Info card */}
-      <div className="glass rounded-lg p-6 flex items-start gap-4 border border-primary/10">
+      <div className="border-t py-6 flex items-start gap-4 border border-primary/10">
         <div className="size-10 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
           <ShieldCheck className="h-5 w-5 text-primary" />
         </div>
@@ -229,7 +169,7 @@ function ApiKeysPage() {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="glass rounded-lg p-8 max-w-lg w-full  shadow-elevated"
+            className="glass rounded-lg p-8 max-w-lg w-full max-h-[90dvh] overflow-y-auto shadow-elevated"
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="size-10 rounded-md bg-primary/10 flex items-center justify-center ">
@@ -297,7 +237,7 @@ function TestEndpointCard() {
   };
 
   return (
-    <div className="glass rounded-lg p-6 border border-border">
+    <div className="border-t py-6 border border-border">
       <div className="flex items-center gap-3 mb-4">
         <div className="size-10 rounded-md bg-primary/10 flex items-center justify-center">
           <ShieldCheck className="h-5 w-5 text-primary" />
@@ -310,13 +250,13 @@ function TestEndpointCard() {
           </p>
         </div>
       </div>
-      <div className="flex gap-2">
+      <div className="flex flex-wrap gap-2">
         <input
           type="password"
           value={key}
           onChange={(e) => setKey(e.target.value)}
           placeholder="ae_live_..."
-          className="flex-1 bg-muted border border-border rounded-md px-4 py-3 font-mono text-xs text-primary placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50"
+          className="min-w-0 flex-1 bg-muted border border-border rounded-md px-4 py-3 font-mono text-xs text-primary placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50"
         />
         <Button
           onClick={test}
@@ -461,7 +401,7 @@ function CreateKeyModal({
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="glass rounded-lg p-8 max-w-md w-full  shadow-elevated"
+        className="glass rounded-lg p-8 max-w-md w-full max-h-[90dvh] overflow-y-auto shadow-elevated"
       >
         <div className="flex items-start justify-between mb-4">
           <div>
