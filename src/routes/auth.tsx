@@ -2,11 +2,10 @@ import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
-import { lovable } from "@/integrations/lovable";
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
-import { googleCallbackUrl, safeAuthRedirect } from "@/lib/auth-redirect";
+import { safeAuthRedirect } from "@/lib/auth-redirect";
 import heroImg from "@/assets/hero-cloud.jpg";
 
 export const Route = createFileRoute("/auth")({
@@ -33,6 +32,27 @@ const schema = z.object({
   fullName: z.string().min(2).max(100).optional(),
 });
 
+function getAuthErrorMessage(error: unknown, action: "login" | "signup" | "google") {
+  const message = error instanceof Error ? error.message.toLowerCase() : "";
+  if (message.includes("invalid login") || message.includes("invalid email or password")) {
+    return "Email ou mot de passe incorrect";
+  }
+  if (message.includes("email not confirmed")) {
+    return "Confirmez votre adresse email avant de vous connecter.";
+  }
+  if (message.includes("already registered") || message.includes("already been registered")) {
+    return "Cet email est déjà utilisé";
+  }
+  if (message.includes("password") && message.includes("characters")) {
+    return "Le mot de passe doit contenir au moins 8 caractères.";
+  }
+  if (message.includes("rate limit") || message.includes("too many")) {
+    return "Trop de tentatives. Réessayez dans quelques minutes.";
+  }
+  if (action === "google") return "La connexion Google est indisponible pour le moment.";
+  return "Une erreur d'authentification est survenue. Réessayez.";
+}
+
 function AuthPage() {
   const { mode, redirect } = Route.useSearch();
   const navigate = useNavigate();
@@ -42,12 +62,38 @@ function AuthPage() {
   const [password, setPassword] = useState("");
   const [fullName, setFullName] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const [confirmationPending, setConfirmationPending] = useState(false);
 
   useEffect(() => {
     if (!authLoading && user) {
       navigate({ to: redirect, replace: true });
     }
   }, [user, authLoading, navigate, redirect]);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+    const authError = params.get("error_description") ?? params.get("error");
+    if (!code && !authError) return;
+
+    let cancelled = false;
+    const finishCallback = async () => {
+      if (authError) {
+        toast.error("La connexion a échoué. Réessayez ou utilisez votre email et mot de passe.");
+        return;
+      }
+      setSubmitting(true);
+      const { error } = await supabase.auth.exchangeCodeForSession(code!);
+      if (cancelled) return;
+      if (error) {
+        toast.error("Le lien de connexion est invalide ou expiré. Réessayez.");
+      }
+      setSubmitting(false);
+      window.history.replaceState({}, document.title, `/auth?redirect=${encodeURIComponent(redirect)}`);
+    };
+    void finishCallback();
+    return () => { cancelled = true; };
+  }, [redirect]);
 
   useEffect(() => {
     setIsSignup(mode === "signup");
@@ -68,17 +114,22 @@ function AuthPage() {
     setSubmitting(true);
     try {
       if (isSignup) {
-        const { error } = await supabase.auth.signUp({
+        const { data, error } = await supabase.auth.signUp({
           email,
           password,
           options: {
-            emailRedirectTo: `${window.location.origin}/dashboard`,
+            emailRedirectTo: `${window.location.origin}/auth?redirect=${encodeURIComponent(redirect)}`,
             data: { full_name: fullName },
           },
         });
         if (error) throw error;
-        toast.success("Compte créé. Bienvenue !");
-        navigate({ to: "/dashboard" });
+        if (data.session) {
+          toast.success("Compte créé. Bienvenue !");
+          navigate({ to: redirect });
+        } else {
+          setConfirmationPending(true);
+          toast.success("Compte créé. Consultez votre email pour confirmer votre adresse.");
+        }
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
@@ -86,14 +137,7 @@ function AuthPage() {
         navigate({ to: redirect });
       }
     } catch (err) {
-      const msg = err instanceof Error ? err.message : "Erreur";
-      if (msg.toLowerCase().includes("invalid login")) {
-        toast.error("Email ou mot de passe incorrect");
-      } else if (msg.toLowerCase().includes("already registered")) {
-        toast.error("Cet email est déjà utilisé");
-      } else {
-        toast.error(msg);
-      }
+      toast.error(getAuthErrorMessage(err, isSignup ? "signup" : "login"));
     } finally {
       setSubmitting(false);
     }
@@ -102,15 +146,15 @@ function AuthPage() {
   const handleGoogle = async () => {
     setSubmitting(true);
     try {
-      const result = await lovable.auth.signInWithOAuth("google", {
-        redirect_uri: googleCallbackUrl(window.location.origin, redirect),
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: {
+          redirectTo: `${window.location.origin}/auth?redirect=${encodeURIComponent(redirect)}`,
+        },
       });
-      if (result.error) throw result.error;
-      if (result.redirected) return;
-      // The broker has restored the session; AuthProvider's listener owns navigation.
-      setSubmitting(false);
+      if (error) throw error;
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Erreur Google");
+      toast.error(getAuthErrorMessage(err, "google"));
       setSubmitting(false);
     }
   };
@@ -134,6 +178,11 @@ function AuthPage() {
                   {isSignup ? "Entrez vos informations pour créer votre compte" : "Entrez votre email ci-dessous pour vous connecter"}
                 </p>
               </div>
+              {confirmationPending && isSignup && (
+                <p className="rounded-md border border-border bg-muted px-3 py-2 text-sm text-muted-foreground">
+                  Vérifiez votre boîte mail et confirmez votre adresse avant de vous connecter.
+                </p>
+              )}
               <div className="grid gap-6">
                 {isSignup && (
                   <div className="grid gap-2">
