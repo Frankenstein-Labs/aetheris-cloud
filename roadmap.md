@@ -1,5 +1,7 @@
 # Dokploy adoption
 
+- [ ] Replace the old public landing page with Frankenstein Lab, an AI laboratory identity inspired by Render; inspect the uploaded reference, preserve existing authentication/dashboard, and verify navigation and display.
+
 - [x] Fix Google OAuth dashboard access: public callback with sanitized destination; verified signed-out gate, restored-session workspace access and refresh. Google account-selection itself requires the user's retry.
 
 - [x] Pin official source and record full screen coverage and license boundaries in DOKPLOY-COVERAGE.md.
