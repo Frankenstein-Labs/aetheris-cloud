@@ -1,6 +1,6 @@
 # Dokploy adoption
 
-- [ ] Replace the old public landing page with Frankenstein Lab, an AI laboratory identity inspired by Render; inspect the uploaded reference, preserve existing authentication/dashboard, and verify navigation and display.
+- [ ] Replace the old public landing page with Aetheris Cloud, Powered by Frankenstein Lab: Render-inspired dark developer design, workspace/orchestration/engines sections, truthful trust indicators, working navigation and responsive verification; preserve existing authentication/dashboard.
 
 - [x] Fix Google OAuth dashboard access: public callback with sanitized destination; verified signed-out gate, restored-session workspace access and refresh. Google account-selection itself requires the user's retry.
 
