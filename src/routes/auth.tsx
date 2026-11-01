@@ -32,7 +32,7 @@ const schema = z.object({
   fullName: z.string().min(2).max(100).optional(),
 });
 
-function getAuthErrorMessage(error: unknown, action: "login" | "signup" | "google") {
+function getAuthErrorMessage(error: unknown, action: "login" | "signup" | "github") {
   const message = error instanceof Error ? error.message.toLowerCase() : "";
   if (message.includes("invalid login") || message.includes("invalid email or password")) {
     return "Email ou mot de passe incorrect";
@@ -49,7 +49,7 @@ function getAuthErrorMessage(error: unknown, action: "login" | "signup" | "googl
   if (message.includes("rate limit") || message.includes("too many")) {
     return "Trop de tentatives. Réessayez dans quelques minutes.";
   }
-  if (action === "google") return "La connexion Google est indisponible pour le moment.";
+  if (action === "github") return "La connexion GitHub est indisponible pour le moment.";
   return "Une erreur d'authentification est survenue. Réessayez.";
 }
 
@@ -143,18 +143,18 @@ function AuthPage() {
     }
   };
 
-  const handleGoogle = async () => {
+  const handleGitHub = async () => {
     setSubmitting(true);
     try {
       const { error } = await supabase.auth.signInWithOAuth({
-        provider: "google",
+        provider: "github",
         options: {
           redirectTo: `${window.location.origin}/auth?redirect=${encodeURIComponent(redirect)}`,
         },
       });
       if (error) throw error;
     } catch (err) {
-      toast.error(getAuthErrorMessage(err, "google"));
+      toast.error(getAuthErrorMessage(err, "github"));
       setSubmitting(false);
     }
   };
@@ -210,11 +210,11 @@ function AuthPage() {
                 <div className="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
                   <span className="relative z-10 bg-background px-2 text-muted-foreground">Ou continuer avec</span>
                 </div>
-                <button type="button" onClick={handleGoogle} disabled={submitting} className="flex h-10 w-full items-center justify-center gap-2 rounded-md border border-input bg-background text-sm font-medium hover:bg-accent disabled:opacity-60">
+                <button type="button" onClick={handleGitHub} disabled={submitting} className="flex h-10 w-full items-center justify-center gap-2 rounded-md border border-input bg-background text-sm font-medium hover:bg-accent disabled:opacity-60">
                   <svg className="h-4 w-4" viewBox="0 0 24 24" aria-hidden>
-                    <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09zM12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23zM5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84zM12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                    <path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 7.87c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2" />
                   </svg>
-                  Se connecter avec Google
+                  Se connecter avec GitHub
                 </button>
               </div>
               <div className="text-center text-sm">
