@@ -2,11 +2,10 @@ import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
-import { lovable } from "@/integrations/lovable";
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "sonner";
 import { FlaskConical, Loader2 } from "lucide-react";
-import { googleCallbackUrl, safeAuthRedirect } from "@/lib/auth-redirect";
+import { safeAuthRedirect, supabaseAuthRedirectUrl } from "@/lib/auth-redirect";
 import heroImg from "@/assets/lab-compute.jpg";
 
 export const Route = createFileRoute("/auth")({
@@ -74,7 +73,7 @@ function AuthPage() {
           options: {
             // Return to the public auth route first so the auth provider can
             // hydrate the session before the dashboard guard runs.
-            emailRedirectTo: googleCallbackUrl(window.location.origin, redirect),
+            emailRedirectTo: supabaseAuthRedirectUrl(window.location.origin, redirect),
             data: { full_name: fullName.trim() },
           },
         });
@@ -112,15 +111,17 @@ function AuthPage() {
   const handleGoogle = async () => {
     setSubmitting(true);
     try {
-      const result = await lovable.auth.signInWithOAuth("google", {
-        redirect_uri: googleCallbackUrl(window.location.origin, redirect),
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: {
+          redirectTo: supabaseAuthRedirectUrl(window.location.origin, redirect),
+        },
       });
-      if (result.error) throw result.error;
-      if (result.redirected) return;
-      // The broker has restored the session; AuthProvider's listener owns navigation.
-      setSubmitting(false);
-    } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Erreur Google");
+      if (error) throw error;
+      // Supabase redirects to Google; the auth listener navigates after return.
+      return;
+    } catch {
+      toast.error("Impossible de se connecter avec Google. Vérifiez la configuration OAuth Supabase.");
       setSubmitting(false);
     }
   };

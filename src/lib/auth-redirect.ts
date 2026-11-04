@@ -10,3 +10,10 @@ export function googleCallbackUrl(origin: string, destination: unknown): string 
   url.searchParams.set("redirect", safeAuthRedirect(destination));
   return url.href;
 }
+
+export function supabaseAuthRedirectUrl(origin: string, destination: unknown): string {
+  return (
+    import.meta.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL ||
+    googleCallbackUrl(origin, destination)
+  );
+}
