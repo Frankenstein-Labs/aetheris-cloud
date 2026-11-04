@@ -19,23 +19,27 @@ function ResetPasswordPage() {
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    // Detect recovery flow via URL hash
-    if (typeof window !== "undefined" && window.location.hash.includes("type=recovery")) {
-      setMode("update");
-    }
+    const hash = typeof window !== "undefined" ? window.location.hash : "";
+    if (hash.includes("type=recovery")) setMode("update");
+
+    const { data } = supabase.auth.onAuthStateChange((event) => {
+      if (event === "PASSWORD_RECOVERY") setMode("update");
+    });
+    return () => data.subscription.unsubscribe();
   }, []);
 
   const sendReset = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
     try {
-      const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      const { error } = await supabase.auth.resetPasswordForEmail(email.trim().toLowerCase(), {
         redirectTo: `${window.location.origin}/reset-password`,
       });
       if (error) throw error;
-      toast.success("Email envoyé. Vérifiez votre boîte de réception.");
+      toast.success("Si ce compte existe, un email de réinitialisation a été envoyé.");
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Erreur");
+      const message = err instanceof Error ? err.message.toLowerCase() : "";
+      toast.error(message.includes("rate limit") ? "Trop de demandes. Réessayez plus tard." : "Impossible d'envoyer le lien. Réessayez.");
     } finally {
       setSubmitting(false);
     }
@@ -52,9 +56,11 @@ function ResetPasswordPage() {
       const { error } = await supabase.auth.updateUser({ password });
       if (error) throw error;
       toast.success("Mot de passe mis à jour");
-      navigate({ to: "/dashboard" });
+      await supabase.auth.signOut();
+      navigate({ to: "/auth", search: { mode: "signin", redirect: "/dashboard" } });
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Erreur");
+      const message = err instanceof Error ? err.message.toLowerCase() : "";
+      toast.error(message.includes("password") ? "Le mot de passe n'a pas pu être mis à jour." : "Impossible de mettre à jour le mot de passe.");
     } finally {
       setSubmitting(false);
     }

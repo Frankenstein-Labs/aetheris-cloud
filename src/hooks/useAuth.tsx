@@ -48,17 +48,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setSession(sess);
       setUser(sess?.user ?? null);
       if (sess?.user) {
-        // Defer profile fetch to avoid recursive calls inside the listener
-        setTimeout(() => loadProfile(sess.user.id), 0);
+        // Defer profile fetch to avoid recursive calls inside the listener.
+        setTimeout(() => void loadProfile(sess.user.id), 0);
       } else {
         setProfile(null);
       }
     });
 
-    supabase.auth.getSession().then(({ data: { session: sess } }) => {
+    supabase.auth.getSession().then(({ data: { session: sess }, error }) => {
+      if (error) console.error("[v0] Failed to restore Supabase session", error);
       setSession(sess);
       setUser(sess?.user ?? null);
-      if (sess?.user) loadProfile(sess.user.id);
+      if (sess?.user) void loadProfile(sess.user.id);
       setLoading(false);
     });
 
