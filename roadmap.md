@@ -1,6 +1,6 @@
 # Dokploy adoption
 
-- [ ] Replace the old public landing page with Aetheris Cloud, Powered by Frankenstein Lab: Render-inspired dark developer design, workspace/orchestration/engines sections, truthful trust indicators, working navigation and responsive verification; preserve existing authentication/dashboard.
+- [x] Replace the old public landing page with Aetheris Cloud, Powered by Frankenstein Lab: Render-inspired dark developer design, workspace/orchestration/engines sections, truthful trust indicators, working navigation and responsive verification; preserve existing authentication/dashboard.
 
 - [x] Fix Google OAuth dashboard access: public callback with sanitized destination; verified signed-out gate, restored-session workspace access and refresh. Google account-selection itself requires the user's retry.
 
