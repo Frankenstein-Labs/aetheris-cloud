@@ -5,7 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "sonner";
 import { FlaskConical, Loader2 } from "lucide-react";
-import { googleCallbackUrl, safeAuthRedirect } from "@/lib/auth-redirect";
+import { safeAuthRedirect, supabaseAuthRedirectUrl } from "@/lib/auth-redirect";
 import heroImg from "@/assets/lab-compute.jpg";
 
 export const Route = createFileRoute("/auth")({
@@ -73,7 +73,7 @@ function AuthPage() {
           options: {
             // Return to the public auth route first so the auth provider can
             // hydrate the session before the dashboard guard runs.
-            emailRedirectTo: googleCallbackUrl(window.location.origin, redirect),
+            emailRedirectTo: supabaseAuthRedirectUrl(window.location.origin, redirect),
             data: { full_name: fullName.trim() },
           },
         });
@@ -114,7 +114,7 @@ function AuthPage() {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          redirectTo: googleCallbackUrl(window.location.origin, redirect),
+          redirectTo: supabaseAuthRedirectUrl(window.location.origin, redirect),
         },
       });
       if (error) throw error;
