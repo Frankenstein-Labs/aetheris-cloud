@@ -1,5 +1,6 @@
-import { createFileRoute, Outlet, redirect } from "@tanstack/react-router";
-import { supabase } from "@/integrations/supabase/client";
+import { createFileRoute, Outlet } from "@tanstack/react-router";
+import { useEffect } from "react";
+import { useAuth } from "@/hooks/useAuth";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { Separator } from "@/components/ui/separator";
 import { DashboardSearch } from "@/components/layout/DashboardSearch";
@@ -8,22 +9,21 @@ import { AppSidebar, useActiveNavLabel } from "@/components/layout/AppSidebar";
 
 export const Route = createFileRoute("/dashboard")({
   ssr: false,
-  beforeLoad: async ({ location }) => {
-    const {
-      data: { session },
-    } = await supabase.auth.getSession();
-    if (!session) {
-      throw redirect({
-        to: "/auth",
-        search: { mode: "signin", redirect: location.href },
-      });
-    }
-  },
   component: DashboardLayout,
 });
 
 function DashboardLayout() {
   const activeLabel = useActiveNavLabel();
+  const { user, loading } = useAuth();
+
+  useEffect(() => {
+    if (!loading && !user) {
+      const destination = encodeURIComponent(window.location.pathname + window.location.search);
+      window.location.replace(`/auth?mode=signin&redirect=${destination}`);
+    }
+  }, [loading, user]);
+
+  if (loading || !user) return null;
 
   return (
     <DashboardTheme><SidebarProvider>

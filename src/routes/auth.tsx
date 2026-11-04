@@ -68,19 +68,25 @@ function AuthPage() {
     setSubmitting(true);
     try {
       if (isSignup) {
-        const { error } = await supabase.auth.signUp({
-          email,
+        const { data, error } = await supabase.auth.signUp({
+          email: email.trim().toLowerCase(),
           password,
           options: {
-            emailRedirectTo: `${window.location.origin}/dashboard`,
-            data: { full_name: fullName },
+            // Return to the public auth route first so the auth provider can
+            // hydrate the session before the dashboard guard runs.
+            emailRedirectTo: googleCallbackUrl(window.location.origin, redirect),
+            data: { full_name: fullName.trim() },
           },
         });
         if (error) throw error;
-        toast.success("Compte créé. Bienvenue !");
-        navigate({ to: "/dashboard" });
+        if (data.session) {
+          toast.success("Compte créé. Bienvenue !");
+          navigate({ to: redirect });
+        } else {
+          toast.success("Compte créé. Vérifiez votre email pour confirmer votre compte.");
+        }
       } else {
-        const { error } = await supabase.auth.signInWithPassword({ email, password });
+        const { error } = await supabase.auth.signInWithPassword({ email: email.trim().toLowerCase(), password });
         if (error) throw error;
         toast.success("Connecté");
         navigate({ to: redirect });
@@ -89,10 +95,14 @@ function AuthPage() {
       const msg = err instanceof Error ? err.message : "Erreur";
       if (msg.toLowerCase().includes("invalid login")) {
         toast.error("Email ou mot de passe incorrect");
+      } else if (msg.toLowerCase().includes("email not confirmed")) {
+        toast.error("Vérifiez votre email avant de vous connecter.");
       } else if (msg.toLowerCase().includes("already registered")) {
         toast.error("Cet email est déjà utilisé");
+      } else if (msg.toLowerCase().includes("rate limit")) {
+        toast.error("Trop de tentatives. Réessayez plus tard.");
       } else {
-        toast.error(msg);
+        toast.error("Impossible de terminer l'authentification. Réessayez.");
       }
     } finally {
       setSubmitting(false);
