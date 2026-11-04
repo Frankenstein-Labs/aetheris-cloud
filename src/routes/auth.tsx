@@ -5,9 +5,9 @@ import { supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable";
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "sonner";
-import { Loader2 } from "lucide-react";
+import { FlaskConical, Loader2 } from "lucide-react";
 import { googleCallbackUrl, safeAuthRedirect } from "@/lib/auth-redirect";
-import heroImg from "@/assets/hero-cloud.jpg";
+import heroImg from "@/assets/lab-compute.jpg";
 
 export const Route = createFileRoute("/auth")({
   validateSearch: (search) => ({
@@ -119,17 +119,18 @@ function AuthPage() {
     "h-10 w-full rounded-md border border-input bg-transparent px-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring";
 
   return (
-    <div className="grid min-h-svh bg-background text-foreground lg:grid-cols-2">
+    <div className="lab-page lab-auth grid min-h-svh bg-background text-foreground lg:grid-cols-2">
       <div className="flex flex-col gap-4 p-6 md:p-10">
         <Link to="/" className="flex items-center gap-2 font-medium">
-          <span className="flex size-7 items-center justify-center rounded-md bg-primary font-bold text-primary-foreground">Æ</span>
-          Aetheris Cloud
+          <span className="lab-logo flex size-8 items-center justify-center rounded-md"><FlaskConical className="size-4" /></span>
+          <span className="font-display text-[17px] font-semibold">Aetheris Cloud</span>
         </Link>
         <div className="flex flex-1 items-center justify-center">
           <div className="w-full max-w-xs">
             <form onSubmit={handleSubmit} className="flex flex-col gap-6">
               <div className="flex flex-col items-center gap-2 text-center">
-                <h1 className="text-2xl font-bold">{isSignup ? "Créer un compte" : "Connexion à votre compte"}</h1>
+                <span className="lab-kicker">Powered by Frankenstein Lab</span>
+                <h1 className="font-display text-3xl font-medium">{isSignup ? "Créer un compte" : "Connexion à votre compte"}</h1>
                 <p className="text-sm text-muted-foreground">
                   {isSignup ? "Entrez vos informations pour créer votre compte" : "Entrez votre email ci-dessous pour vous connecter"}
                 </p>
@@ -178,8 +179,9 @@ function AuthPage() {
           </div>
         </div>
       </div>
-      <div className="relative hidden bg-muted lg:block">
-        <img src={heroImg} alt="" className="absolute inset-0 h-full w-full object-cover opacity-60" />
+      <div className="relative hidden overflow-hidden lg:block">
+        <img src={heroImg} alt="Graphite compute cluster with mint light seams" width={1920} height={1024} className="absolute inset-0 h-full w-full object-cover object-[70%_center]" />
+        <div className="lab-auth-fade absolute inset-0" />
       </div>
     </div>
   );
