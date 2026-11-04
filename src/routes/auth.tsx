@@ -2,7 +2,6 @@ import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
-import { lovable } from "@/integrations/lovable";
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "sonner";
 import { FlaskConical, Loader2 } from "lucide-react";
@@ -112,15 +111,17 @@ function AuthPage() {
   const handleGoogle = async () => {
     setSubmitting(true);
     try {
-      const result = await lovable.auth.signInWithOAuth("google", {
-        redirect_uri: googleCallbackUrl(window.location.origin, redirect),
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: {
+          redirectTo: googleCallbackUrl(window.location.origin, redirect),
+        },
       });
-      if (result.error) throw result.error;
-      if (result.redirected) return;
-      // The broker has restored the session; AuthProvider's listener owns navigation.
-      setSubmitting(false);
-    } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Erreur Google");
+      if (error) throw error;
+      // Supabase redirects to Google; the auth listener navigates after return.
+      return;
+    } catch {
+      toast.error("Impossible de se connecter avec Google. Vérifiez la configuration OAuth Supabase.");
       setSubmitting(false);
     }
   };
