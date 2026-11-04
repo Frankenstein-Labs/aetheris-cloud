@@ -2,6 +2,7 @@
 
 - Keep TanStack Start routing and Aetheris authentication; adapt Dokploy OSS patterns rather than introducing Next.js, because the deployed hosting runtime is fixed.
 - Scope Dokploy theme tokens to the connected dashboard shell, because the public site is outside the dashboard redesign.
+- Scope the public landing theme under its own page wrapper and keep the landing reachable without session redirects, so its marketing design never leaks into the dashboard.
 - Target independent infrastructure providers behind authenticated server functions; retain the existing external Dokploy connector only as a transitional option, never simulate container operations or share administrative credentials.
 - Keep pinned Apache-licensed upstream UI sources in vendor/dokploy outside the application compilation graph; adapt executable screens under src with Aetheris data and routing, because upstream Next.js/tRPC and proprietary imports cannot run unchanged here.
 - Use a shared Dokploy screen registry to track navigation, official source references and integration prerequisites, so unavailable infrastructure is never represented as working.

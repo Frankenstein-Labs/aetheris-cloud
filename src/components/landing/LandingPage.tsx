@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
   Boxes,
@@ -19,10 +20,10 @@ import {
 import computeImage from "@/assets/lab-compute.jpg";
 
 const nav = [
-  { label: "Features", href: "#features" },
-  { label: "Workspace", href: "#workspace" },
-  { label: "Marketplace", href: "#marketplace" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Features", to: "/docs" },
+  { label: "Workspace", to: "/dashboard/workspace" },
+  { label: "Marketplace", to: "/dashboard/marketplace" },
+  { label: "Pricing", to: "/dashboard/subscription" },
 ];
 
 function Logo() {
@@ -44,9 +45,9 @@ function Header() {
         <Logo />
         <nav className="hidden items-center gap-8 md:flex">
           {nav.map((n) => (
-            <a key={n.href} href={n.href} className="lab-link text-sm">
+            <Button asChild variant="ghost" key={n.to} className="lab-link text-sm"><Link to={n.to}>
               {n.label}
-            </a>
+            </Link></Button>
           ))}
         </nav>
         <div className="hidden items-center gap-3 md:flex">
@@ -57,16 +58,16 @@ function Header() {
             Get Started
           </Link>
         </div>
-        <button className="md:hidden" aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen(!open)}>
+        <Button variant="ghost" size="icon" className="md:hidden" aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen(!open)}>
           {open ? <X className="size-5" /> : <Menu className="size-5" />}
-        </button>
+        </Button>
       </div>
       {open && (
         <div className="lab-mobile-menu grid gap-1 px-5 pb-5 md:hidden">
           {nav.map((n) => (
-            <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="py-3 text-base">
+            <Link key={n.to} to={n.to} onClick={() => setOpen(false)} className="py-3 text-base">
               {n.label}
-            </a>
+            </Link>
           ))}
           <Link to="/auth" search={{ mode: "signup", redirect: "/dashboard" }} className="lab-btn-primary mt-3 h-11">
             Get Started
@@ -95,7 +96,7 @@ function Hero() {
             Powered by Frankenstein Lab
           </div>
           <h1 className="font-display text-[44px] font-medium leading-[0.98] sm:text-6xl lg:text-[86px]">
-            The cloud where AI models are <span className="lab-accent-text">born</span>.
+            Aetheris Cloud<span className="block lab-accent-text">Your AI laboratory.</span>
           </h1>
           <p className="lab-muted mt-8 max-w-2xl text-lg leading-8 md:text-xl">
             Orchestrate containers, run model experiments and ship intelligent services from one precise developer platform.
@@ -108,11 +109,6 @@ function Hero() {
               Explore Workspace
             </Link>
           </div>
-        </div>
-        <div className="lab-terminal mt-16 max-w-md rounded-lg p-4 font-mono text-xs leading-6 md:absolute md:bottom-24 md:right-8 md:mt-0">
-          <div className="lab-muted mb-2 flex justify-between"><span>aetheris lab</span><span>example command</span></div>
-          <p><span className="lab-accent-text">$</span> aetheris run hf/mistral --benchmark</p>
-          <p className="lab-muted">Connect a provider to run this workload.</p>
         </div>
       </div>
     </section>
@@ -150,9 +146,7 @@ function Features() {
           <Zap className="lab-accent-text size-6" />
           <h3 className="font-display mt-8 text-2xl font-medium">Cloud Engines</h3>
           <p className="lab-muted mt-3">High-performance workloads that scale with the compute providers you choose.</p>
-          <div className="mt-8 flex gap-2">
-            {[0, 1, 2, 3, 4].map((i) => <span key={i} className="lab-bar h-12 flex-1 rounded-sm" style={{ opacity: 0.35 + i * 0.13 }} />)}
-          </div>
+          <div className="lab-route mt-8 flex items-center gap-3 font-mono text-xs"><Cpu className="size-5" /> CPU / GPU · Your infrastructure</div>
         </article>
       </div>
     </section>
@@ -163,7 +157,7 @@ function Trust() {
   const items = [
     { icon: GitBranch, title: "Open-source roots", text: "Built with Apache-licensed infrastructure patterns." },
     { icon: ShieldCheck, title: "High-availability ready", text: "Design workloads for resilient, connected providers." },
-    { icon: Layers, title: "Zero-friction deployment", text: "Keys, models and services in one workflow." },
+    { icon: Layers, title: "One deployment workflow", text: "Keys, models and services together. Compute requires a connected provider." },
   ];
   return (
     <section id="marketplace" className="lab-band">
@@ -208,8 +202,8 @@ function Footer() {
         </div>
         <div className="grid content-start gap-3 text-sm">
           <p className="font-medium">Platform</p>
-          <a href="#features" className="lab-link">Features</a>
-          <a href="#workspace" className="lab-link">Workspace</a>
+          <Link to="/docs" className="lab-link">Features</Link>
+          <Link to="/dashboard/workspace" className="lab-link">Workspace</Link>
         </div>
         <div className="grid content-start gap-3 text-sm">
           <p className="font-medium">Developers</p>
