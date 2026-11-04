@@ -51,12 +51,12 @@ function Header() {
           ))}
         </nav>
         <div className="hidden items-center gap-3 md:flex">
-          <Link to="/auth" search={{ mode: "signin", redirect: "/dashboard" }} className="lab-link text-sm">
+          <Button asChild variant="ghost"><Link to="/auth" search={{ mode: "signin", redirect: "/dashboard" }} className="lab-link text-sm">
             Sign in
-          </Link>
-          <Link to="/auth" search={{ mode: "signup", redirect: "/dashboard" }} className="lab-btn-primary h-9 px-4 text-sm">
+          </Link></Button>
+          <Button asChild><Link to="/auth" search={{ mode: "signup", redirect: "/dashboard" }} className="lab-btn-primary h-9 px-4 text-sm">
             Get Started
-          </Link>
+          </Link></Button>
         </div>
         <Button variant="ghost" size="icon" className="md:hidden" aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen(!open)}>
           {open ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -69,9 +69,9 @@ function Header() {
               {n.label}
             </Link>
           ))}
-          <Link to="/auth" search={{ mode: "signup", redirect: "/dashboard" }} className="lab-btn-primary mt-3 h-11">
+          <Button asChild><Link to="/auth" search={{ mode: "signup", redirect: "/dashboard" }} className="lab-btn-primary mt-3 h-11">
             Get Started
-          </Link>
+          </Link></Button>
         </div>
       )}
     </header>
@@ -89,7 +89,7 @@ function Hero() {
         className="lab-hero-image absolute inset-0 h-full w-full object-cover object-[70%_center]"
       />
       <div className="lab-hero-fade absolute inset-0" />
-      <div className="relative mx-auto flex min-h-[760px] max-w-7xl flex-col justify-center px-5 py-24 md:px-8">
+      <div className="lab-hero-content relative mx-auto flex max-w-7xl flex-col justify-center px-5 py-16 md:px-8 md:py-24">
         <div className="lab-reveal max-w-3xl">
           <div className="lab-pill mb-8 inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs">
             <span className="lab-dot size-1.5 rounded-full" />
@@ -102,12 +102,12 @@ function Hero() {
             Orchestrate containers, run model experiments and ship intelligent services from one precise developer platform.
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <Link to="/auth" search={{ mode: "signup", redirect: "/dashboard" }} className="lab-btn-primary group h-12 px-6">
+            <Button asChild><Link to="/auth" search={{ mode: "signup", redirect: "/dashboard" }} className="lab-btn-primary group h-12 px-6">
               Start Building Free <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-            <Link to="/auth" search={{ mode: "signin", redirect: "/dashboard/workspace" }} className="lab-btn-secondary h-12 px-6">
+            </Link></Button>
+            <Button asChild variant="outline"><Link to="/auth" search={{ mode: "signin", redirect: "/dashboard/workspace" }} className="lab-btn-secondary h-12 px-6">
               Explore Workspace
-            </Link>
+            </Link></Button>
           </div>
         </div>
       </div>
@@ -130,7 +130,7 @@ function Features() {
           <p className="lab-muted mt-4 max-w-xl text-lg">Fine-tune, benchmark, quantize and organise MoE experiments with your providers and models.</p>
           <div className="mt-10 grid gap-3 sm:grid-cols-2">
             {["Fine-tuning", "Benchmarking", "Quantization", "MoE models"].map((x) => (
-              <div key={x} className="lab-subcard flex items-center gap-3 rounded-md p-4 text-sm">
+              <div key={x} className="flex items-center gap-3 py-4 text-sm">
                 <Check className="lab-accent-text size-4" /> {x}
               </div>
             ))}
@@ -177,15 +177,15 @@ function Trust() {
 function Pricing() {
   return (
     <section id="pricing" className="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
-      <div className="lab-card lab-card-glow grid gap-10 p-8 md:grid-cols-[1.4fr_1fr] md:p-14">
+      <div className="grid gap-10 py-8 md:grid-cols-[1.4fr_1fr] md:py-14">
         <div>
           <p className="lab-kicker">Private beta</p>
           <h2 className="font-display mt-4 text-4xl font-medium md:text-6xl">Start in the lab today.</h2>
           <p className="lab-muted mt-5 max-w-xl text-lg">Create an account for free access to the workspace. Paid plans are not active yet.</p>
         </div>
         <div className="flex flex-col justify-end gap-3">
-          <Link to="/auth" search={{ mode: "signup", redirect: "/dashboard" }} className="lab-btn-primary h-12">Start Building Free</Link>
-          <Link to="/docs" className="lab-btn-secondary h-12">Read documentation</Link>
+          <Button asChild><Link to="/auth" search={{ mode: "signup", redirect: "/dashboard" }} className="lab-btn-primary h-12">Start Building Free</Link></Button>
+          <Button asChild variant="outline"><Link to="/docs" className="lab-btn-secondary h-12">Read documentation</Link></Button>
         </div>
       </div>
     </section>

@@ -382,7 +382,13 @@ body:has(.dokploy-shell) { font-family: "Inter", system-ui, sans-serif; }
   --lab-muted: oklch(0.7 0.012 160); --lab-line: oklch(1 0 0 / 0.1);
   --lab-card: oklch(0.16 0.008 160); --lab-mint: oklch(0.86 0.15 165);
   background: var(--lab-bg); color: var(--lab-fg); scroll-behavior: smooth;
+  --background: var(--lab-bg); --foreground: var(--lab-fg);
+  --primary: var(--lab-mint); --primary-foreground: var(--lab-bg);
+  --accent: var(--lab-card); --accent-foreground: var(--lab-fg);
+  --border: var(--lab-line); --input: var(--lab-line); --ring: var(--lab-mint);
 }
+.lab-hero-content { min-height: min(680px, calc(100svh - 144px)); }
+.lab-page a:focus-visible { outline: 2px solid var(--lab-mint); outline-offset: 4px; }
 .lab-page .font-display { font-family: "Space Grotesk", system-ui, sans-serif; letter-spacing: 0; }
 .lab-muted { color: var(--lab-muted); }
 .lab-accent-text, .lab-route { color: var(--lab-mint); }
