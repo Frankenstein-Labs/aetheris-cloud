@@ -370,7 +370,8 @@ function CreateKeyModal({
     }
     setSubmitting(true);
     try {
-      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const supabaseUrl =
+        import.meta.env.VITE_SUPABASE_URL || import.meta.env.NEXT_PUBLIC_SUPABASE_URL;
       const res = await fetch(`${supabaseUrl}/functions/v1/create-api-key`, {
         method: "POST",
         headers: {
